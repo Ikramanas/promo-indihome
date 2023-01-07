@@ -106,7 +106,12 @@
                         <li>*Biaya pemasangan Rp. 500.000 <i>(dibayar setelah pemasangan)</i></li>
                         <li>*PPN 10%</li>
                       </ul>
-                      <a href="https://api.whatsapp.com/send?phone=6282290129248&text=Form Pemasangan Indihome%0ANama%20Lengkap%20%3A%0AAlamat%20Lengkap%20Pemasangan%20%3A%0ANo%20HP%20%3A%0AEmail%20%3A%0APaket%20Yang%20Dipilih%20%3A%0A*Foto%20KTP*%0A*Foto%20dgn%20KTP*%0A*Share%20Lokasi%20Via%20WA*" class="btn-buy mt-1">Berlangganan</a>
+                      {{-- <a href="{{route('home.edit',1)}}" class="btn-buy mt-1">Berlangganan</a> --}}
+                      <form action="{{route('home.edit',11)}}">
+                        @csrf
+                        @method('POST')
+                        <input type="submit"  class="btn-buy mt-1" value="Berlangganan">
+                      </form>
                     </div>
                   </div>
         
@@ -269,6 +274,7 @@
         
             </section>
           </div>
+          
           <!-- paket 3P -->
           <div class="col-12 portfolio-item filter-web">
             <section id="pricing" class="pricing">

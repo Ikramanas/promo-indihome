@@ -3,10 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Paket_data;
-use App\Models\Kategori;
 
-class HomeController extends Controller
+class TransaksiController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,9 +13,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $paket_data = Paket_data::all();
-        $kategori = Kategori::all();
-        return view('index', compact(['paket_data','kategori']));
+        //
     }
 
     /**
@@ -60,8 +56,7 @@ class HomeController extends Controller
      */
     public function edit($id)
     {
-        $data = Paket_data::find($id);
-        return view('transaksi', compact(['data']));
+        //
     }
 
     /**

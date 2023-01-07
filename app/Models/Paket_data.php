@@ -15,4 +15,9 @@ class Paket_data extends Model
         'ppn(%)',
         'label'
     ];
+
+    // public function kategori()
+    // {
+    //     return $this->belongsTo(kategori::class);
+    // }
 }

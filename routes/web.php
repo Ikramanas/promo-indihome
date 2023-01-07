@@ -15,4 +15,4 @@ use App\Http\Controllers\HomeController;
 */
 
 
-Route::resource('/home', HomeController::class); 
+Route::resource('/home', HomeController::class);  

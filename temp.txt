@@ -1,0 +1,36 @@
+$Paket_data = new App\Models\Paket_data;
+$Paket_data->nama = "Paket 2P Internet + TV";
+$Paket_data->kategori = "Paket 2P";
+$Paket_data->kecepatan = 30;
+$Paket_data->harga = 420000;
+$Paket_data->harga_pemasangan = 500000;
+$Paket_data->ppn=10;
+$Paket_data->label = "promo";
+
+$Paket_data->nama = "Paket 2P Internet + TV";
+$Paket_data->kategori = "Paket 2P";
+$Paket_data->kecepatan = 40;
+$Paket_data->harga = 495000;
+$Paket_data->harga_pemasangan = 500000;
+$Paket_data->ppn=10;
+$Paket_data->label = "promo";
+
+$Paket_data->nama = "Paket 2P Internet + TV";
+
+$Paket_data->kategori = "Paket 2P";
+$Paket_data->kecepatan = 50;
+$Paket_data->harga = 560000;
+$Paket_data->harga_pemasangan = 500000;
+$Paket_data->ppn=10;
+$Paket_data->label = "promo";
+$Paket_data->save();
+
+$Paket_data->nama = "Paket 2P Internet + TV";
+$Paket_data->kategori = "Paket 2P";
+$Paket_data->kecepatan = 100;
+$Paket_data->harga = 915000;
+$Paket_data->harga_pemasangan = 500000;
+$Paket_data->ppn=10;
+$Paket_data->label = "promo";
+
+$Paket_data->save();

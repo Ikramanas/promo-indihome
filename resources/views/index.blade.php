@@ -128,7 +128,12 @@
                         <li>*Biaya pemasangan Rp. 500.000 <i>(dibayar setelah pemasangan)</i></li>
                         <li>*PPN 10%</li>
                       </ul>
-                      <a href="https://api.whatsapp.com/send?phone=6282290129248&text=Form Pemasangan Indihome%0ANama%20Lengkap%20%3A%0AAlamat%20Lengkap%20Pemasangan%20%3A%0ANo%20HP%20%3A%0AEmail%20%3A%0APaket%20Yang%20Dipilih%20%3A%0A*Foto%20KTP*%0A*Foto%20dgn%20KTP*%0A*Share%20Lokasi%20Via%20WA*" class="btn-buy mt-1">Berlangganan</a>
+                      {{-- <a href="https://api.whatsapp.com/send?phone=6282290129248&text=Form Pemasangan Indihome%0ANama%20Lengkap%20%3A%0AAlamat%20Lengkap%20Pemasangan%20%3A%0ANo%20HP%20%3A%0AEmail%20%3A%0APaket%20Yang%20Dipilih%20%3A%0A*Foto%20KTP*%0A*Foto%20dgn%20KTP*%0A*Share%20Lokasi%20Via%20WA*" class="btn-buy mt-1">Berlangganan</a> --}}
+                      <form action="{{route('home.edit',13)}}">
+                        @csrf
+                        @method('POST')
+                        <input type="submit"  class="btn-buy mt-1" value="Berlangganan">
+                      </form>
                     </div>
                   </div>
         
@@ -145,7 +150,12 @@
                         <li>*Biaya pemasangan Rp. 500.000 <i>(dibayar setelah pemasangan)</i></li>
                         <li>*PPN 10%</li>
                       </ul>
-                      <a href="https://api.whatsapp.com/send?phone=6282290129248&text=Form Pemasangan Indihome%0ANama%20Lengkap%20%3A%0AAlamat%20Lengkap%20Pemasangan%20%3A%0ANo%20HP%20%3A%0AEmail%20%3A%0APaket%20Yang%20Dipilih%20%3A%0A*Foto%20KTP*%0A*Foto%20dgn%20KTP*%0A*Share%20Lokasi%20Via%20WA*" class="btn-buy mt-1">Berlangganan</a>
+                      {{-- <a href="https://api.whatsapp.com/send?phone=6282290129248&text=Form Pemasangan Indihome%0ANama%20Lengkap%20%3A%0AAlamat%20Lengkap%20Pemasangan%20%3A%0ANo%20HP%20%3A%0AEmail%20%3A%0APaket%20Yang%20Dipilih%20%3A%0A*Foto%20KTP*%0A*Foto%20dgn%20KTP*%0A*Share%20Lokasi%20Via%20WA*" class="btn-buy mt-1">Berlangganan</a> --}}
+                      <form action="{{route('home.edit',14)}}">
+                        @csrf
+                        @method('POST')
+                        <input type="submit"  class="btn-buy mt-1" value="Berlangganan">
+                      </form>
                     </div>
                   </div>
 
@@ -162,7 +172,12 @@
                         <li>*Biaya pemasangan Rp. 500.000 <i>(dibayar setelah pemasangan)</i></li>
                         <li>*PPN 10%</li>
                       </ul>
-                      <a href="https://api.whatsapp.com/send?phone=6282290129248&text=Form Pemasangan Indihome%0ANama%20Lengkap%20%3A%0AAlamat%20Lengkap%20Pemasangan%20%3A%0ANo%20HP%20%3A%0AEmail%20%3A%0APaket%20Yang%20Dipilih%20%3A%0A*Foto%20KTP*%0A*Foto%20dgn%20KTP*%0A*Share%20Lokasi%20Via%20WA*" class="btn-buy mt-1">Berlangganan</a>
+                      {{-- <a href="https://api.whatsapp.com/send?phone=6282290129248&text=Form Pemasangan Indihome%0ANama%20Lengkap%20%3A%0AAlamat%20Lengkap%20Pemasangan%20%3A%0ANo%20HP%20%3A%0AEmail%20%3A%0APaket%20Yang%20Dipilih%20%3A%0A*Foto%20KTP*%0A*Foto%20dgn%20KTP*%0A*Share%20Lokasi%20Via%20WA*" class="btn-buy mt-1">Berlangganan</a> --}}
+                      <form action="{{route('home.edit',15)}}">
+                        @csrf
+                        @method('POST')
+                        <input type="submit"  class="btn-buy mt-1" value="Berlangganan">
+                      </form>
                     </div>
                   </div>
 
@@ -179,7 +194,12 @@
                         <li>*Biaya pemasangan Rp. 500.000 <i>(dibayar setelah pemasangan)</i></li>
                         <li>*PPN 10%</li>
                       </ul>
-                      <a href="https://api.whatsapp.com/send?phone=6282290129248&text=Form Pemasangan Indihome%0ANama%20Lengkap%20%3A%0AAlamat%20Lengkap%20Pemasangan%20%3A%0ANo%20HP%20%3A%0AEmail%20%3A%0APaket%20Yang%20Dipilih%20%3A%0A*Foto%20KTP*%0A*Foto%20dgn%20KTP*%0A*Share%20Lokasi%20Via%20WA*" class="btn-buy mt-1">Berlangganan</a>
+                      {{-- <a href="https://api.whatsapp.com/send?phone=6282290129248&text=Form Pemasangan Indihome%0ANama%20Lengkap%20%3A%0AAlamat%20Lengkap%20Pemasangan%20%3A%0ANo%20HP%20%3A%0AEmail%20%3A%0APaket%20Yang%20Dipilih%20%3A%0A*Foto%20KTP*%0A*Foto%20dgn%20KTP*%0A*Share%20Lokasi%20Via%20WA*" class="btn-buy mt-1">Berlangganan</a> --}}
+                      <form action="{{route('home.edit',35)}}">
+                        @csrf
+                        @method('POST')
+                        <input type="submit"  class="btn-buy mt-1" value="Berlangganan">
+                      </form>
                     </div>
                   </div>
                   
@@ -196,7 +216,12 @@
                         <li>*Biaya pemasangan Rp. 500.000 <i>(dibayar setelah pemasangan)</i></li>
                         <li>*PPN 10%</li>
                       </ul>
-                      <a href="https://api.whatsapp.com/send?phone=6282290129248&text=Form Pemasangan Indihome%0ANama%20Lengkap%20%3A%0AAlamat%20Lengkap%20Pemasangan%20%3A%0ANo%20HP%20%3A%0AEmail%20%3A%0APaket%20Yang%20Dipilih%20%3A%0A*Foto%20KTP*%0A*Foto%20dgn%20KTP*%0A*Share%20Lokasi%20Via%20WA*" class="btn-buy mt-1">Berlangganan</a>
+                      {{-- <a href="https://api.whatsapp.com/send?phone=6282290129248&text=Form Pemasangan Indihome%0ANama%20Lengkap%20%3A%0AAlamat%20Lengkap%20Pemasangan%20%3A%0ANo%20HP%20%3A%0AEmail%20%3A%0APaket%20Yang%20Dipilih%20%3A%0A*Foto%20KTP*%0A*Foto%20dgn%20KTP*%0A*Share%20Lokasi%20Via%20WA*" class="btn-buy mt-1">Berlangganan</a> --}}
+                      <form action="{{route('home.edit',36)}}">
+                        @csrf
+                        @method('POST')
+                        <input type="submit"  class="btn-buy mt-1" value="Berlangganan">
+                      </form>
                     </div>
                   </div>
 
@@ -213,7 +238,12 @@
                         <li>*Biaya pemasangan Rp. 500.000 <i>(dibayar setelah pemasangan)</i></li>
                         <li>*PPN 10%</li>
                       </ul>
-                      <a href="https://api.whatsapp.com/send?phone=6282290129248&text=Form Pemasangan Indihome%0ANama%20Lengkap%20%3A%0AAlamat%20Lengkap%20Pemasangan%20%3A%0ANo%20HP%20%3A%0AEmail%20%3A%0APaket%20Yang%20Dipilih%20%3A%0A*Foto%20KTP*%0A*Foto%20dgn%20KTP*%0A*Share%20Lokasi%20Via%20WA*" class="btn-buy mt-1">Berlangganan</a>
+                      {{-- <a href="https://api.whatsapp.com/send?phone=6282290129248&text=Form Pemasangan Indihome%0ANama%20Lengkap%20%3A%0AAlamat%20Lengkap%20Pemasangan%20%3A%0ANo%20HP%20%3A%0AEmail%20%3A%0APaket%20Yang%20Dipilih%20%3A%0A*Foto%20KTP*%0A*Foto%20dgn%20KTP*%0A*Share%20Lokasi%20Via%20WA*" class="btn-buy mt-1">Berlangganan</a> --}}
+                      <form action="{{route('home.edit',37)}}">
+                        @csrf
+                        @method('POST')
+                        <input type="submit"  class="btn-buy mt-1" value="Berlangganan">
+                      </form>
                     </div>
                   </div>
 
@@ -230,7 +260,12 @@
                         <li>*Biaya pemasangan Rp. 500.000 <i>(dibayar setelah pemasangan)</i></li>
                         <li>*PPN 10%</li>
                       </ul>
-                      <a href="https://api.whatsapp.com/send?phone=6282290129248&text=Form Pemasangan Indihome%0ANama%20Lengkap%20%3A%0AAlamat%20Lengkap%20Pemasangan%20%3A%0ANo%20HP%20%3A%0AEmail%20%3A%0APaket%20Yang%20Dipilih%20%3A%0A*Foto%20KTP*%0A*Foto%20dgn%20KTP*%0A*Share%20Lokasi%20Via%20WA*" class="btn-buy mt-1">Berlangganan</a>
+                      {{-- <a href="https://api.whatsapp.com/send?phone=6282290129248&text=Form Pemasangan Indihome%0ANama%20Lengkap%20%3A%0AAlamat%20Lengkap%20Pemasangan%20%3A%0ANo%20HP%20%3A%0AEmail%20%3A%0APaket%20Yang%20Dipilih%20%3A%0A*Foto%20KTP*%0A*Foto%20dgn%20KTP*%0A*Share%20Lokasi%20Via%20WA*" class="btn-buy mt-1">Berlangganan</a> --}}
+                      <form action="{{route('home.edit',38)}}">
+                        @csrf
+                        @method('POST')
+                        <input type="submit"  class="btn-buy mt-1" value="Berlangganan">
+                      </form>
                     </div>
                   </div>
 
@@ -247,7 +282,12 @@
                         <li>*Biaya pemasangan Rp. 500.000 <i>(dibayar setelah pemasangan)</i></li>
                         <li>*PPN 10%</li>
                       </ul>
-                      <a href="https://api.whatsapp.com/send?phone=6282290129248&text=Form Pemasangan Indihome%0ANama%20Lengkap%20%3A%0AAlamat%20Lengkap%20Pemasangan%20%3A%0ANo%20HP%20%3A%0AEmail%20%3A%0APaket%20Yang%20Dipilih%20%3A%0A*Foto%20KTP*%0A*Foto%20dgn%20KTP*%0A*Share%20Lokasi%20Via%20WA*" class="btn-buy mt-1">Berlangganan</a>
+                      {{-- <a href="https://api.whatsapp.com/send?phone=6282290129248&text=Form Pemasangan Indihome%0ANama%20Lengkap%20%3A%0AAlamat%20Lengkap%20Pemasangan%20%3A%0ANo%20HP%20%3A%0AEmail%20%3A%0APaket%20Yang%20Dipilih%20%3A%0A*Foto%20KTP*%0A*Foto%20dgn%20KTP*%0A*Share%20Lokasi%20Via%20WA*" class="btn-buy mt-1">Berlangganan</a> --}}
+                      <form action="{{route('home.edit',39)}}">
+                        @csrf
+                        @method('POST')
+                        <input type="submit"  class="btn-buy mt-1" value="Berlangganan">
+                      </form>
                     </div>
                   </div>
 
@@ -264,7 +304,12 @@
                         <li>*Biaya pemasangan Rp. 500.000 <i>(dibayar setelah pemasangan)</i></li>
                         <li>*PPN 10%</li>
                       </ul>
-                      <a href="https://api.whatsapp.com/send?phone=6282290129248&text=Form Pemasangan Indihome%0ANama%20Lengkap%20%3A%0AAlamat%20Lengkap%20Pemasangan%20%3A%0ANo%20HP%20%3A%0AEmail%20%3A%0APaket%20Yang%20Dipilih%20%3A%0A*Foto%20KTP*%0A*Foto%20dgn%20KTP*%0A*Share%20Lokasi%20Via%20WA*" class="btn-buy mt-1">Berlangganan</a>
+                      {{-- <a href="https://api.whatsapp.com/send?phone=6282290129248&text=Form Pemasangan Indihome%0ANama%20Lengkap%20%3A%0AAlamat%20Lengkap%20Pemasangan%20%3A%0ANo%20HP%20%3A%0AEmail%20%3A%0APaket%20Yang%20Dipilih%20%3A%0A*Foto%20KTP*%0A*Foto%20dgn%20KTP*%0A*Share%20Lokasi%20Via%20WA*" class="btn-buy mt-1">Berlangganan</a> --}}
+                      <form action="{{route('home.edit',40)}}">
+                        @csrf
+                        @method('POST')
+                        <input type="submit"  class="btn-buy mt-1" value="Berlangganan">
+                      </form>
                     </div>
                   </div>
         
@@ -296,7 +341,12 @@
                         <li>*Biaya pemasangan Rp. 500.000 <i>(dibayar setelah pemasangan)</i></li>
                         <li>*PPN 10%</li>
                       </ul>
-                      <a href="https://api.whatsapp.com/send?phone=6282290129248&text=Form Pemasangan Indihome%0ANama%20Lengkap%20%3A%0AAlamat%20Lengkap%20Pemasangan%20%3A%0ANo%20HP%20%3A%0AEmail%20%3A%0APaket%20Yang%20Dipilih%20%3A%0A*Foto%20KTP*%0A*Foto%20dgn%20KTP*%0A*Share%20Lokasi%20Via%20WA*" class="btn-buy mt-1">Berlangganan</a>
+                      {{-- <a href="https://api.whatsapp.com/send?phone=6282290129248&text=Form Pemasangan Indihome%0ANama%20Lengkap%20%3A%0AAlamat%20Lengkap%20Pemasangan%20%3A%0ANo%20HP%20%3A%0AEmail%20%3A%0APaket%20Yang%20Dipilih%20%3A%0A*Foto%20KTP*%0A*Foto%20dgn%20KTP*%0A*Share%20Lokasi%20Via%20WA*" class="btn-buy mt-1">Berlangganan</a> --}}
+                      <form action="{{route('home.edit',17)}}">
+                        @csrf
+                        @method('POST')
+                        <input type="submit"  class="btn-buy mt-1" value="Berlangganan">
+                      </form>
                     </div>
                   </div>
 
@@ -313,7 +363,12 @@
                         <li>*Biaya pemasangan Rp. 500.000 <i>(dibayar setelah pemasangan)</i></li>
                         <li>*PPN 10%</li>
                       </ul>
-                      <a href="https://api.whatsapp.com/send?phone=6282290129248&text=Form Pemasangan Indihome%0ANama%20Lengkap%20%3A%0AAlamat%20Lengkap%20Pemasangan%20%3A%0ANo%20HP%20%3A%0AEmail%20%3A%0APaket%20Yang%20Dipilih%20%3A%0A*Foto%20KTP*%0A*Foto%20dgn%20KTP*%0A*Share%20Lokasi%20Via%20WA*" class="btn-buy mt-1">Berlangganan</a>
+                      {{-- <a href="https://api.whatsapp.com/send?phone=6282290129248&text=Form Pemasangan Indihome%0ANama%20Lengkap%20%3A%0AAlamat%20Lengkap%20Pemasangan%20%3A%0ANo%20HP%20%3A%0AEmail%20%3A%0APaket%20Yang%20Dipilih%20%3A%0A*Foto%20KTP*%0A*Foto%20dgn%20KTP*%0A*Share%20Lokasi%20Via%20WA*" class="btn-buy mt-1">Berlangganan</a> --}}
+                      <form action="{{route('home.edit',18)}}">
+                        @csrf
+                        @method('POST')
+                        <input type="submit"  class="btn-buy mt-1" value="Berlangganan">
+                      </form>
                     </div>
                   </div>
 
@@ -330,7 +385,12 @@
                         <li>*Biaya pemasangan Rp. 500.000 <i>(dibayar setelah pemasangan)</i></li>
                         <li>*PPN 10%</li>
                       </ul>
-                      <a href="https://api.whatsapp.com/send?phone=6282290129248&text=Form Pemasangan Indihome%0ANama%20Lengkap%20%3A%0AAlamat%20Lengkap%20Pemasangan%20%3A%0ANo%20HP%20%3A%0AEmail%20%3A%0APaket%20Yang%20Dipilih%20%3A%0A*Foto%20KTP*%0A*Foto%20dgn%20KTP*%0A*Share%20Lokasi%20Via%20WA*" class="btn-buy mt-1">Berlangganan</a>
+                      {{-- <a href="https://api.whatsapp.com/send?phone=6282290129248&text=Form Pemasangan Indihome%0ANama%20Lengkap%20%3A%0AAlamat%20Lengkap%20Pemasangan%20%3A%0ANo%20HP%20%3A%0AEmail%20%3A%0APaket%20Yang%20Dipilih%20%3A%0A*Foto%20KTP*%0A*Foto%20dgn%20KTP*%0A*Share%20Lokasi%20Via%20WA*" class="btn-buy mt-1">Berlangganan</a> --}}
+                      <form action="{{route('home.edit',19)}}">
+                        @csrf
+                        @method('POST')
+                        <input type="submit"  class="btn-buy mt-1" value="Berlangganan">
+                      </form>
                     </div>
                   </div>
         
@@ -347,7 +407,12 @@
                         <li>*Biaya pemasangan Rp. 500.000 <i>(dibayar setelah pemasangan)</i></li>
                         <li>*PPN 10%</li>
                       </ul>
-                      <a href="https://api.whatsapp.com/send?phone=6282290129248&text=Form Pemasangan Indihome%0ANama%20Lengkap%20%3A%0AAlamat%20Lengkap%20Pemasangan%20%3A%0ANo%20HP%20%3A%0AEmail%20%3A%0APaket%20Yang%20Dipilih%20%3A%0A*Foto%20KTP*%0A*Foto%20dgn%20KTP*%0A*Share%20Lokasi%20Via%20WA*" class="btn-buy mt-1">Berlangganan</a>
+                      {{-- <a href="https://api.whatsapp.com/send?phone=6282290129248&text=Form Pemasangan Indihome%0ANama%20Lengkap%20%3A%0AAlamat%20Lengkap%20Pemasangan%20%3A%0ANo%20HP%20%3A%0AEmail%20%3A%0APaket%20Yang%20Dipilih%20%3A%0A*Foto%20KTP*%0A*Foto%20dgn%20KTP*%0A*Share%20Lokasi%20Via%20WA*" class="btn-buy mt-1">Berlangganan</a> --}}
+                      <form action="{{route('home.edit',20)}}">
+                        @csrf
+                        @method('POST')
+                        <input type="submit"  class="btn-buy mt-1" value="Berlangganan">
+                      </form>
                     </div>
                   </div>
         
@@ -364,7 +429,12 @@
                         <li>*Biaya pemasangan Rp. 500.000 <i>(dibayar setelah pemasangan)</i></li>
                         <li>*PPN 10%</li>
                       </ul>
-                      <a href="https://api.whatsapp.com/send?phone=6282290129248&text=Form Pemasangan Indihome%0ANama%20Lengkap%20%3A%0AAlamat%20Lengkap%20Pemasangan%20%3A%0ANo%20HP%20%3A%0AEmail%20%3A%0APaket%20Yang%20Dipilih%20%3A%0A*Foto%20KTP*%0A*Foto%20dgn%20KTP*%0A*Share%20Lokasi%20Via%20WA*" class="btn-buy mt-1">Berlangganan</a>
+                      {{-- <a href="https://api.whatsapp.com/send?phone=6282290129248&text=Form Pemasangan Indihome%0ANama%20Lengkap%20%3A%0AAlamat%20Lengkap%20Pemasangan%20%3A%0ANo%20HP%20%3A%0AEmail%20%3A%0APaket%20Yang%20Dipilih%20%3A%0A*Foto%20KTP*%0A*Foto%20dgn%20KTP*%0A*Share%20Lokasi%20Via%20WA*" class="btn-buy mt-1">Berlangganan</a> --}}
+                      <form action="{{route('home.edit',21)}}">
+                        @csrf
+                        @method('POST')
+                        <input type="submit"  class="btn-buy mt-1" value="Berlangganan">
+                      </form>
                     </div>
                   </div>
         
@@ -395,7 +465,12 @@
                         <li>*Biaya pemasangan Rp. 500.000 <i>(dibayar setelah pemasangan)</i></li>
                         <li>*PPN 10%</li>
                       </ul>
-                      <a href="https://api.whatsapp.com/send?phone=6282290129248&text=Form Pemasangan Indihome%0ANama%20Lengkap%20%3A%0AAlamat%20Lengkap%20Pemasangan%20%3A%0ANo%20HP%20%3A%0AEmail%20%3A%0APaket%20Yang%20Dipilih%20%3A%0A*Foto%20KTP*%0A*Foto%20dgn%20KTP*%0A*Share%20Lokasi%20Via%20WA*" class="btn-buy mt-1">Berlangganan</a>
+                      {{-- <a href="https://api.whatsapp.com/send?phone=6282290129248&text=Form Pemasangan Indihome%0ANama%20Lengkap%20%3A%0AAlamat%20Lengkap%20Pemasangan%20%3A%0ANo%20HP%20%3A%0AEmail%20%3A%0APaket%20Yang%20Dipilih%20%3A%0A*Foto%20KTP*%0A*Foto%20dgn%20KTP*%0A*Share%20Lokasi%20Via%20WA*" class="btn-buy mt-1">Berlangganan</a> --}}
+                      <form action="{{route('home.edit',22)}}">
+                        @csrf
+                        @method('POST')
+                        <input type="submit"  class="btn-buy mt-1" value="Berlangganan">
+                      </form>
                     </div>
                   </div>
 
@@ -412,7 +487,12 @@
                         <li>*Biaya pemasangan Rp. 500.000 <i>(dibayar setelah pemasangan)</i></li>
                         <li>*PPN 10%</li>
                       </ul>
-                      <a href="https://api.whatsapp.com/send?phone=6282290129248&text=Form Pemasangan Indihome%0ANama%20Lengkap%20%3A%0AAlamat%20Lengkap%20Pemasangan%20%3A%0ANo%20HP%20%3A%0AEmail%20%3A%0APaket%20Yang%20Dipilih%20%3A%0A*Foto%20KTP*%0A*Foto%20dgn%20KTP*%0A*Share%20Lokasi%20Via%20WA*" class="btn-buy mt-1">Berlangganan</a>
+                      {{-- <a href="https://api.whatsapp.com/send?phone=6282290129248&text=Form Pemasangan Indihome%0ANama%20Lengkap%20%3A%0AAlamat%20Lengkap%20Pemasangan%20%3A%0ANo%20HP%20%3A%0AEmail%20%3A%0APaket%20Yang%20Dipilih%20%3A%0A*Foto%20KTP*%0A*Foto%20dgn%20KTP*%0A*Share%20Lokasi%20Via%20WA*" class="btn-buy mt-1">Berlangganan</a> --}}
+                      <form action="{{route('home.edit',23)}}">
+                        @csrf
+                        @method('POST')
+                        <input type="submit"  class="btn-buy mt-1" value="Berlangganan">
+                      </form>
                     </div>
                   </div>
         
@@ -429,7 +509,12 @@
                         <li>*Biaya pemasangan Rp. 500.000 <i>(dibayar setelah pemasangan)</i></li>
                         <li>*PPN 10%</li>
                       </ul>
-                      <a href="https://api.whatsapp.com/send?phone=6282290129248&text=Form Pemasangan Indihome%0ANama%20Lengkap%20%3A%0AAlamat%20Lengkap%20Pemasangan%20%3A%0ANo%20HP%20%3A%0AEmail%20%3A%0APaket%20Yang%20Dipilih%20%3A%0A*Foto%20KTP*%0A*Foto%20dgn%20KTP*%0A*Share%20Lokasi%20Via%20WA*" class="btn-buy mt-1">Berlangganan</a>
+                      {{-- <a href="https://api.whatsapp.com/send?phone=6282290129248&text=Form Pemasangan Indihome%0ANama%20Lengkap%20%3A%0AAlamat%20Lengkap%20Pemasangan%20%3A%0ANo%20HP%20%3A%0AEmail%20%3A%0APaket%20Yang%20Dipilih%20%3A%0A*Foto%20KTP*%0A*Foto%20dgn%20KTP*%0A*Share%20Lokasi%20Via%20WA*" class="btn-buy mt-1">Berlangganan</a> --}}
+                      <form action="{{route('home.edit',24)}}">
+                        @csrf
+                        @method('POST')
+                        <input type="submit"  class="btn-buy mt-1" value="Berlangganan">
+                      </form>
                     </div>
                   </div>
 
@@ -460,7 +545,12 @@
                         <li>*Biaya pemasangan Rp. 500.000 <i>(dibayar setelah pemasangan)</i></li>
                         <li>*PPN 10%</li>
                       </ul>
-                      <a href="https://api.whatsapp.com/send?phone=6282290129248&text=Form Pemasangan Indihome%0ANama%20Lengkap%20%3A%0AAlamat%20Lengkap%20Pemasangan%20%3A%0ANo%20HP%20%3A%0AEmail%20%3A%0APaket%20Yang%20Dipilih%20%3A%0A*Foto%20KTP*%0A*Foto%20dgn%20KTP*%0A*Share%20Lokasi%20Via%20WA*" class="btn-buy mt-1">Berlangganan</a>
+                      {{-- <a href="https://api.whatsapp.com/send?phone=6282290129248&text=Form Pemasangan Indihome%0ANama%20Lengkap%20%3A%0AAlamat%20Lengkap%20Pemasangan%20%3A%0ANo%20HP%20%3A%0AEmail%20%3A%0APaket%20Yang%20Dipilih%20%3A%0A*Foto%20KTP*%0A*Foto%20dgn%20KTP*%0A*Share%20Lokasi%20Via%20WA*" class="btn-buy mt-1">Berlangganan</a> --}}
+                      <form action="{{route('home.edit',25)}}">
+                        @csrf
+                        @method('POST')
+                        <input type="submit"  class="btn-buy mt-1" value="Berlangganan">
+                      </form>
                     </div>
                   </div>
 
@@ -492,7 +582,12 @@
                         <li>*Biaya pemasangan Rp. 500.000 <i>(dibayar setelah pemasangan)</i></li>
                         <li>*PPN 10%</li>
                       </ul>
-                      <a href="https://api.whatsapp.com/send?phone=6282290129248&text=Form Pemasangan Indihome%0ANama%20Lengkap%20%3A%0AAlamat%20Lengkap%20Pemasangan%20%3A%0ANo%20HP%20%3A%0AEmail%20%3A%0APaket%20Yang%20Dipilih%20%3A%0A*Foto%20KTP*%0A*Foto%20dgn%20KTP*%0A*Share%20Lokasi%20Via%20WA*" class="btn-buy mt-1">Berlangganan</a>
+                      {{-- <a href="https://api.whatsapp.com/send?phone=6282290129248&text=Form Pemasangan Indihome%0ANama%20Lengkap%20%3A%0AAlamat%20Lengkap%20Pemasangan%20%3A%0ANo%20HP%20%3A%0AEmail%20%3A%0APaket%20Yang%20Dipilih%20%3A%0A*Foto%20KTP*%0A*Foto%20dgn%20KTP*%0A*Share%20Lokasi%20Via%20WA*" class="btn-buy mt-1">Berlangganan</a> --}}
+                      <form action="{{route('home.edit',26)}}">
+                        @csrf
+                        @method('POST')
+                        <input type="submit"  class="btn-buy mt-1" value="Berlangganan">
+                      </form>
                     </div>
                   </div>
 
@@ -509,7 +604,12 @@
                         <li>*Biaya pemasangan Rp. 500.000 <i>(dibayar setelah pemasangan)</i></li>
                         <li>*PPN 10%</li>
                       </ul>
-                      <a href="https://api.whatsapp.com/send?phone=6282290129248&text=Form Pemasangan Indihome%0ANama%20Lengkap%20%3A%0AAlamat%20Lengkap%20Pemasangan%20%3A%0ANo%20HP%20%3A%0AEmail%20%3A%0APaket%20Yang%20Dipilih%20%3A%0A*Foto%20KTP*%0A*Foto%20dgn%20KTP*%0A*Share%20Lokasi%20Via%20WA*" class="btn-buy mt-1">Berlangganan</a>
+                      {{-- <a href="https://api.whatsapp.com/send?phone=6282290129248&text=Form Pemasangan Indihome%0ANama%20Lengkap%20%3A%0AAlamat%20Lengkap%20Pemasangan%20%3A%0ANo%20HP%20%3A%0AEmail%20%3A%0APaket%20Yang%20Dipilih%20%3A%0A*Foto%20KTP*%0A*Foto%20dgn%20KTP*%0A*Share%20Lokasi%20Via%20WA*" class="btn-buy mt-1">Berlangganan</a> --}}
+                      <form action="{{route('home.edit',27)}}">
+                        @csrf
+                        @method('POST')
+                        <input type="submit"  class="btn-buy mt-1" value="Berlangganan">
+                      </form>
                     </div>
                   </div>
 
@@ -526,7 +626,12 @@
                         <li>*Biaya pemasangan Rp. 500.000 <i>(dibayar setelah pemasangan)</i></li>
                         <li>*PPN 10%</li>
                       </ul>
-                      <a href="https://api.whatsapp.com/send?phone=6282290129248&text=Form Pemasangan Indihome%0ANama%20Lengkap%20%3A%0AAlamat%20Lengkap%20Pemasangan%20%3A%0ANo%20HP%20%3A%0AEmail%20%3A%0APaket%20Yang%20Dipilih%20%3A%0A*Foto%20KTP*%0A*Foto%20dgn%20KTP*%0A*Share%20Lokasi%20Via%20WA*" class="btn-buy mt-1">Berlangganan</a>
+                      {{-- <a href="https://api.whatsapp.com/send?phone=6282290129248&text=Form Pemasangan Indihome%0ANama%20Lengkap%20%3A%0AAlamat%20Lengkap%20Pemasangan%20%3A%0ANo%20HP%20%3A%0AEmail%20%3A%0APaket%20Yang%20Dipilih%20%3A%0A*Foto%20KTP*%0A*Foto%20dgn%20KTP*%0A*Share%20Lokasi%20Via%20WA*" class="btn-buy mt-1">Berlangganan</a> --}}
+                      <form action="{{route('home.edit',28)}}">
+                        @csrf
+                        @method('POST')
+                        <input type="submit"  class="btn-buy mt-1" value="Berlangganan">
+                      </form>
                     </div>
                   </div>
 
@@ -558,7 +663,12 @@
                         <li>*Biaya pemasangan Rp. 500.000 <i>(dibayar setelah pemasangan)</i></li>
                         <li>*PPN 10%</li>
                       </ul>
-                      <a href="https://api.whatsapp.com/send?phone=6282290129248&text=Form Pemasangan Indihome%0ANama%20Lengkap%20%3A%0AAlamat%20Lengkap%20Pemasangan%20%3A%0ANo%20HP%20%3A%0AEmail%20%3A%0APaket%20Yang%20Dipilih%20%3A%0A*Foto%20KTP*%0A*Foto%20dgn%20KTP*%0A*Share%20Lokasi%20Via%20WA*" class="btn-buy mt-1">Berlangganan</a>
+                      {{-- <a href="https://api.whatsapp.com/send?phone=6282290129248&text=Form Pemasangan Indihome%0ANama%20Lengkap%20%3A%0AAlamat%20Lengkap%20Pemasangan%20%3A%0ANo%20HP%20%3A%0AEmail%20%3A%0APaket%20Yang%20Dipilih%20%3A%0A*Foto%20KTP*%0A*Foto%20dgn%20KTP*%0A*Share%20Lokasi%20Via%20WA*" class="btn-buy mt-1">Berlangganan</a> --}}
+                      <form action="{{route('home.edit',32)}}">
+                        @csrf
+                        @method('POST')
+                        <input type="submit"  class="btn-buy mt-1" value="Berlangganan">
+                      </form>
                     </div>
                   </div>
 
@@ -575,7 +685,12 @@
                         <li>*Biaya pemasangan Rp. 500.000 <i>(dibayar setelah pemasangan)</i></li>
                         <li>*PPN 10%</li>
                       </ul>
-                      <a href="https://api.whatsapp.com/send?phone=6282290129248&text=Form Pemasangan Indihome%0ANama%20Lengkap%20%3A%0AAlamat%20Lengkap%20Pemasangan%20%3A%0ANo%20HP%20%3A%0AEmail%20%3A%0APaket%20Yang%20Dipilih%20%3A%0A*Foto%20KTP*%0A*Foto%20dgn%20KTP*%0A*Share%20Lokasi%20Via%20WA*" class="btn-buy mt-1">Berlangganan</a>
+                      {{-- <a href="https://api.whatsapp.com/send?phone=6282290129248&text=Form Pemasangan Indihome%0ANama%20Lengkap%20%3A%0AAlamat%20Lengkap%20Pemasangan%20%3A%0ANo%20HP%20%3A%0AEmail%20%3A%0APaket%20Yang%20Dipilih%20%3A%0A*Foto%20KTP*%0A*Foto%20dgn%20KTP*%0A*Share%20Lokasi%20Via%20WA*" class="btn-buy mt-1">Berlangganan</a> --}}
+                      <form action="{{route('home.edit',33)}}">
+                        @csrf
+                        @method('POST')
+                        <input type="submit"  class="btn-buy mt-1" value="Berlangganan">
+                      </form>
                     </div>
                   </div>
 
@@ -592,7 +707,12 @@
                         <li>*Biaya pemasangan Rp. 500.000 <i>(dibayar setelah pemasangan)</i></li>
                         <li>*PPN 10%</li>
                       </ul>
-                      <a href="https://api.whatsapp.com/send?phone=6282290129248&text=Form Pemasangan Indihome%0ANama%20Lengkap%20%3A%0AAlamat%20Lengkap%20Pemasangan%20%3A%0ANo%20HP%20%3A%0AEmail%20%3A%0APaket%20Yang%20Dipilih%20%3A%0A*Foto%20KTP*%0A*Foto%20dgn%20KTP*%0A*Share%20Lokasi%20Via%20WA*" class="btn-buy mt-1">Berlangganan</a>
+                      {{-- <a href="https://api.whatsapp.com/send?phone=6282290129248&text=Form Pemasangan Indihome%0ANama%20Lengkap%20%3A%0AAlamat%20Lengkap%20Pemasangan%20%3A%0ANo%20HP%20%3A%0AEmail%20%3A%0APaket%20Yang%20Dipilih%20%3A%0A*Foto%20KTP*%0A*Foto%20dgn%20KTP*%0A*Share%20Lokasi%20Via%20WA*" class="btn-buy mt-1">Berlangganan</a> --}}
+                      <form action="{{route('home.edit',34)}}">
+                        @csrf
+                        @method('POST')
+                        <input type="submit"  class="btn-buy mt-1" value="Berlangganan">
+                      </form>
                     </div>
                   </div>
 

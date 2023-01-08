@@ -9,8 +9,8 @@ class Kategori extends Model
 {
     use HasFactory;
 
-    // public function Paket_data()
-    // {
-    //     return $this->hasMany(Paket_data::class);
-    // }
+    public function Paket_data()
+    {
+        return $this->hasMany(Paket_data::class);
+    }
 }

@@ -12,12 +12,14 @@ class Paket_data extends Model
         'nama',
         'kecepatan',
         'harga',
-        'ppn(%)',
-        'label'
+        'harga_pemasangan',
+        'ppn',
+        'label',
+        'kategori_id'
     ];
 
-    // public function kategori()
-    // {
-    //     return $this->belongsTo(kategori::class);
-    // }
+    public function kategori()
+    {
+        return $this->belongsTo(kategori::class);
+    }
 }

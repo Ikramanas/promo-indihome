@@ -6,7 +6,7 @@
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
   <title>
-      {{$title}} - Jendela Baca
+      {{$title}} | Admin Indihome
   </title>
 
   @include('admin.partials.styles')

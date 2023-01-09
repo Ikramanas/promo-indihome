@@ -25,8 +25,9 @@ class kategoriController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function create()
-    {
-        return view('admin.kategori.create');
+    {   
+        $title = 'Tambah Kategori';
+        return view('admin.kategori.create', compact(['title']));
     }
 
     /**
@@ -38,8 +39,9 @@ class kategoriController extends Controller
     public function store(Request $request)
     {
         Kategori::create([
-            'name'  => $request->name
+            'nama'  => $request->nama
         ]);
+        return redirect()->route('kategori.index');
     }
 
     /**
@@ -73,10 +75,12 @@ class kategoriController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Kategori $kategori)
+    public function update($id, Request $request)
     {
+        // dd($request);
+        $kategori = Kategori::find($id);
         $kategori->update([
-            'name'     => $request->name,
+            'nama'     => $request->nama,
         ]);     
         return redirect()->route('kategori.index')->with(['success' => 'Data berhasil diubah!']);
     }

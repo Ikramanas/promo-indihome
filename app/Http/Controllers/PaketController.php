@@ -16,7 +16,7 @@ class PaketController extends Controller
      */
     public function index()
     {
-        $title = 'Dashboard | Admin';
+        $title = 'Dashboard';
         $data = Paket_data::orderBy('created_at', 'desc')->Paginate(20)->withQueryString();
         return view('admin.index', compact(['title','data']));
     }
@@ -115,8 +115,9 @@ class PaketController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Paket_data $paket_data)
+    public function update($id, Request $request)
     {
+        $paket_data = Paket_data::find($id);
         $this->validate($request, [
             'image'         => 'image|mimes:jpg,jpeg,png,gif,svg|max:2048',
             'nama'          => 'required',     
@@ -134,29 +135,32 @@ class PaketController extends Controller
             Storage::delete('admin/assets/img'.$image);
 
             //update data
+            
             $paket_data->update([
-                'image'  => $image,
-                'nama' => $request->nama,     
-                'kecepatan' => $request->kecepatan,     
-                'kategori_id' => $request->kategori_id,
-                'harga' => $request->harga,
-                'harga_pemasangan' => $request->harga_pemasangan,
-                'label' => $request->label,
+                'image'             => $image,
+                'nama'              => $request->nama,     
+                'kecepatan'         => $request->kecepatan,     
+                'kategori_id'       => $request->kategori_id,
+                'harga'             => $request->harga,
+                'harga_pemasangan'  => $request->harga_pemasangan,
+                'label'             => $request->label,
             ]);
+            // return redirect()->route('paket.index')->with(['success' => 'Data berhasil diubah!']); 
 
         }
         else { //jika tidak ada gambar yang ditemukan
+            // dd($request->nama);
             $paket_data->update([
-                    'nama' => $request->nama,     
-                    'kecepatan' => $request->kecepatan,     
-                    'kategori_id' => $request->kategori_id,
-                    'harga' => $request->harga,
-                    'harga_pemasangan' => $request->harga_pemasangan,
-                    'label' => $request->label,
+                    'nama'              => $request->nama,     
+                    'kecepatan'         => $request->kecepatan,     
+                    'kategori_id'       => $request->kategori_id,
+                    'harga'             => $request->harga,
+                    'harga_pemasangan'  => $request->harga_pemasangan,
+                    'label'             => $request->label,
             ]);     
+            return redirect()->route('paket.index')->with(['success' => 'Data berhasil diubah!']); 
         }
         //setelah melakukan update kembali ke index
-        return redirect()->route('paket.index')->with(['success' => 'Data berhasil diubah!']); 
     }
 
     /**

@@ -9,9 +9,9 @@
           <div class="card-body">
             <h5 class="card-title">Kategori Paket Indihome</h5>
             <div class="card col-md-2">
-              <a href="{{route('paket.create')}}" class="btn btn-sm btn-primary">Tambah data</a>
-              @include('partial.alert')
+              <a href="{{route('kategori.create')}}" class="btn btn-sm btn-primary">Tambah data</a>
             </div>
+            @include('partial.alert')
 
 
             <!-- Default Table -->
@@ -30,10 +30,9 @@
                       <th scope="row">{{$data->firstItem() + $rows}}</th>
                       <td>{{$row->nama}}</td>
                       <td>
-                      <a href={{route("paket.show",$row->id)}} style="color: black;"> 
-                          <button type="button" class="btn btn-show"><i class="bi bi-eye-fill"></i></button>
-                      <a href={{route("paket.edit",$row->id)}} style="color: black;"><button type="button" class="btn btn-edit"><i class="bx bxs-edit"></i></button></a>
-                      <form action="{{route('paket.destroy' ,$row->id)}}" method="post">
+                      {{-- {{dd($row->id)}} --}}
+                      <a href={{route("kategori.edit", $row->id)}} style="color: black;"><button type="button" class="btn btn-edit"><i class="bx bxs-edit"></i></button></a>
+                      <form action="{{route('kategori.destroy' ,$row->id)}}" method="post">
                         @csrf
                         @method('DELETE')   
                         <button type="submit" onclick="swal_hapus()" class="btn btn-delete d-flex"><i class="bi bi-trash-fill"></i></button>

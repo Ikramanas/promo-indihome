@@ -7,10 +7,10 @@
 
         <div class="card">
           <div class="card-body profile-card pt-4 d-flex flex-column align-items-center">
-            {{dd($data->image)}}
-            <img src={{asset("assets/img/$data->image")}} alt="gambar" class="rounded-circle">
+            {{-- {{dd($data->image)}} --}}
+            <h2>{{$data->kategori->nama}}</h2>
+            <img src={{asset("admin/assets/img/$data->image")}} alt="gambar" class="rounded-circle">
             <h2>{{$data->nama}}</h2>
-            {{-- <h3>Web Designer</h3> --}}
 
           </div>
         </div>

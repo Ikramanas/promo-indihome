@@ -34,7 +34,7 @@
                         </div>
                     @endif
 
-                    <form action={{route("paket.update", $data->nama)}} method="POST" enctype="multipart/form-data">
+                    <form action={{route("paket.update", $data->id)}} method="POST" enctype="multipart/form-data">
                       @csrf
                       @method('PUT')
                         <div class="row mb-3">

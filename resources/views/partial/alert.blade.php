@@ -1,15 +1,15 @@
-{{-- @if (Session::has('success'))
+@if (Session::has('success'))
 <div class="alert alert-success alert-dismissible" role="alert">
         <i class="bi bi-check-circle me-1"></i>
     <strong> Sucsess.. !</strong> {{ session('success') }}
 </div>
-@endif --}}
+@endif
 
-@if (session('success'))
+{{-- @if (session('success'))
 <div class="alert alert-success" role="alert">
     {{ session('success') }}
 </div>
-@endif
+@endif --}}
 
 
 @if (Session::has('error'))

@@ -34,11 +34,11 @@
                         </div>
                     @endif
 
-                    <form action={{route('paket.store')}} method="POST" enctype="multipart/form-data">
+                    <form action={{route("paket.update", $data->nama)}} method="POST" enctype="multipart/form-data">
                       @csrf
-                      {{-- @method('POST') --}}
+                      @method('PUT')
                         <div class="row mb-3">
-                            <label for="image" class="col-sm-2 col-form-label"  >Image</label>
+                            <label for="image" class="col-sm-2 col-form-label">Image</label>
                             <div class="col-sm-5">
                                 <input class="form-control" type="file" id="formFile" name="image" value="{{$data->image}}" >
                             </div>

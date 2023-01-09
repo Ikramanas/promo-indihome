@@ -3,29 +3,29 @@
  <!-- ======= Hero Section ======= -->
  <section id="hero" class="hero d-flex align-items-center">
 
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-6 d-flex flex-column justify-content-center">
-        <h1 data-aos="fade-up">Selamat datang di IndiHome Makassar</h1>
-        <!-- <h1 data-aos="fade-up">Lengkapi kebutuhan layanan internet, TV dan telepon di rumah dengan paket 3P</h1> -->
-        <h2 data-aos="fade-up" data-aos-delay="400">Solusi Internet Berkelas dan Cerdas Untuk Aktivitas Tanpa Batas. Bebas akses internet stabil, telepon rumah jernih dan tayangan TV interaktif terpopuler dengan IndiHome.</h2>
-        <!-- <h4>Bebas akses internet stabil, telepon rumah jernih dan tayangan TV interaktif terpopuler dengan IndiHome.</h4> -->
-        <div data-aos="fade-up" data-aos-delay="600">
-          <div class="text-center text-lg-start">
-            <a target="_blank" href="https://api.whatsapp.com/send?phone=6282290129248&text=Form Pemasangan Indihome%0ANama%20Lengkap%20%3A%0AAlamat%20Lengkap%20Pemasangan%20%3A%0ANo%20HP%20%3A%0AEmail%20%3A%0APaket%20Yang%20Dipilih%20%3A%0A*Foto%20KTP*%0A*Foto%20dgn%20KTP*%0A*Share%20Lokasi%20Via%20WA*" class="btn-get-started scrollto d-inline-flex align-items-center justify-content-center align-self-center">
-              <span>Pesan Sekarang</span>
-              <i class="bi bi-arrow-right"></i>
-            </a>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 d-flex flex-column justify-content-center">
+          <h1 data-aos="fade-up">Selamat datang di IndiHome Makassar</h1>
+          <!-- <h1 data-aos="fade-up">Lengkapi kebutuhan layanan internet, TV dan telepon di rumah dengan paket 3P</h1> -->
+          <h2 data-aos="fade-up" data-aos-delay="400">Solusi Internet Berkelas dan Cerdas Untuk Aktivitas Tanpa Batas. Bebas akses internet stabil, telepon rumah jernih dan tayangan TV interaktif terpopuler dengan IndiHome.</h2>
+          <!-- <h4>Bebas akses internet stabil, telepon rumah jernih dan tayangan TV interaktif terpopuler dengan IndiHome.</h4> -->
+          <div data-aos="fade-up" data-aos-delay="600">
+            <div class="text-center text-lg-start">
+              <a target="_blank" href="https://api.whatsapp.com/send?phone=6282290129248&text=Form Pemasangan Indihome%0ANama%20Lengkap%20%3A%0AAlamat%20Lengkap%20Pemasangan%20%3A%0ANo%20HP%20%3A%0AEmail%20%3A%0APaket%20Yang%20Dipilih%20%3A%0A*Foto%20KTP*%0A*Foto%20dgn%20KTP*%0A*Share%20Lokasi%20Via%20WA*" class="btn-get-started scrollto d-inline-flex align-items-center justify-content-center align-self-center">
+                <span>Pesan Sekarang</span>
+                <i class="bi bi-arrow-right"></i>
+              </a>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="col-lg-6 hero-img" data-aos="zoom-out" data-aos-delay="200">
-        <img src="assets/img/hero-indihome.jpg" class="img-fluid" alt="">
+        <div class="col-lg-6 hero-img" data-aos="zoom-out" data-aos-delay="200">
+          <img src="assets/img/hero-indihome.jpg" class="img-fluid" alt="">
+        </div>
       </div>
     </div>
-  </div>
 
-</section><!-- End Hero -->
+  </section><!-- End Hero -->
 
 <main id="main">
   <!-- ======= About Section ======= -->
@@ -62,557 +62,67 @@
   <!-- ======= Pricing Section ======= -->
   <section id="portfolio" class="portfolio">
 
-    <div class="container" data-aos="fade-up">
+    <div class="container aos-init aos-animate" data-aos="fade-up">
 
       <header class="section-header">
         <p>Pilihan Paket IndiHome</p>
         
       </header>
 
-      {{-- <div class="row" data-aos="fade-up" data-aos-delay="100">
-        <div class=" col-lg-12 d-flex justify-content-center">
-          <ul id="portfolio-flters">
-            <li data-filter="*" class="filter-active">Semua Paket</li>
-            <li data-filter=".filter-app">Paket 2P</li>
-            <li data-filter=".filter-web">Paket 3P</li>
-            <li data-filter=".filter-card">Paket Gamer</li>
-            <li data-filter=".filter-pelajar">Paket Pelajar</li>
-            <li data-filter=".filter-promo1">Promo Internet Telpon</li>
-            <li data-filter=".filter-promo2">Promo Internet + Telepon + TV</li>
-          </ul>
-        </div>
-      </div> --}}
-
       {{-- PERCOBAAN TAB DINAMIS --}}
       <div class="row" data-aos="fade-up" data-aos-delay="100">
         <div class=" col-lg-12 d-flex justify-content-center">
           <ul id="portfolio-flters">
             <li data-filter="*" class="filter-active">Semua Paket</li>
-            <li data-filter=".filter-app">Paket 2P</li>
-            <li data-filter=".filter-web">Paket 3P</li>
-            <li data-filter=".filter-card">Paket Gamer</li>
-            <li data-filter=".filter-pelajar">Paket Pelajar</li>
-            <li data-filter=".filter-promo1">Promo Internet Telpon</li>
-            <li data-filter=".filter-promo2">Promo Internet + Telepon + TV</li>
+            
+            @foreach ($kategori as $row)
+            <li data-filter=".filter-{{$row->id}}">{{$row->nama}}</li>
+            @endforeach
+            
           </ul>
         </div>
       </div>
 
-
-
       <div class="row gy-4 portfolio-container" data-aos="fade-up" data-aos-delay="200">
 
-        <!-- paket 2P -->
-        <div class="col-12 portfolio-item filter-app">
+        @foreach ($kategori as $row)
+        <div class="col-12 portfolio-item filter-{{$row->id}}">
           <section id="pricing" class="pricing">
 
             <div class="container" data-aos="fade-up">
       
               <div class="row gy-4" data-aos="fade-left">
-      
-                <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="100">
-                  <div class="box">
-                    <span class="featured">Promo</span>
-      
-                    <h3>Paket 2P Internet + TV</h3>
-                    
-                    <img src="assets/img/20mbps.PNG" class="img-fluid " style="margin-top: -15px;">
-                    <div class="price"><sup>Rp.</sup>345.000<span>/bln</span></div>
-                    <!-- <p>Cocok digunakan untuk 3 - 5 perangkat sekaligus</p> -->
-                    <ul>
-                      <li>*Biaya pemasangan Rp. 500.000 <i>(dibayar setelah pemasangan)</i></li>
-                      <li>*PPN 10%</li>
-                    </ul>
-                    <a href="https://api.whatsapp.com/send?phone=6282290129248&text=Form Pemasangan Indihome%0ANama%20Lengkap%20%3A%0AAlamat%20Lengkap%20Pemasangan%20%3A%0ANo%20HP%20%3A%0AEmail%20%3A%0APaket%20Yang%20Dipilih%20%3A%0A*Foto%20KTP*%0A*Foto%20dgn%20KTP*%0A*Share%20Lokasi%20Via%20WA*" class="btn-buy mt-1">Berlangganan</a>
-                  </div>
-                </div>
-      
-                <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="100">
-                  <div class="box">
-                    <span class="featured">Promo</span>
-      
-                    <h3>Paket 2P Internet + TV</h3>
-                    
-                    <img src="assets/img/30mbps.PNG" class="img-fluid " style="margin-top: -15px;">
-                    <div class="price"><sup>Rp.</sup>420.000<span>/bln</span></div>
-                    <!-- <p>Cocok digunakan untuk 5 - 7 perangkat sekaligus</p> -->
-                    <ul>
-                      <li>*Biaya pemasangan Rp. 500.000 <i>(dibayar setelah pemasangan)</i></li>
-                      <li>*PPN 10%</li>
-                    </ul>
-                    <a href="https://api.whatsapp.com/send?phone=6282290129248&text=Form Pemasangan Indihome%0ANama%20Lengkap%20%3A%0AAlamat%20Lengkap%20Pemasangan%20%3A%0ANo%20HP%20%3A%0AEmail%20%3A%0APaket%20Yang%20Dipilih%20%3A%0A*Foto%20KTP*%0A*Foto%20dgn%20KTP*%0A*Share%20Lokasi%20Via%20WA*" class="btn-buy mt-1">Berlangganan</a>
-                  </div>
-                </div>
-      
-                <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="100">
-                  <div class="box">
-                    <span class="featured">Promo</span>
-      
-                    <h3>Paket 2P Internet + TV</h3>
-                    
-                    <img src="assets/img/40mbps.PNG" class="img-fluid " style="margin-top: -15px;">
-                    <div class="price"><sup>Rp.</sup>495.000<span>/bln</span></div>
-                    <!-- <p>Cocok digunakan untuk 7 - 10 perangkat sekaligus</p> -->
-                    <ul>
-                      <li>*Biaya pemasangan Rp. 500.000 <i>(dibayar setelah pemasangan)</i></li>
-                      <li>*PPN 10%</li>
-                    </ul>
-                    <a href="https://api.whatsapp.com/send?phone=6282290129248&text=Form Pemasangan Indihome%0ANama%20Lengkap%20%3A%0AAlamat%20Lengkap%20Pemasangan%20%3A%0ANo%20HP%20%3A%0AEmail%20%3A%0APaket%20Yang%20Dipilih%20%3A%0A*Foto%20KTP*%0A*Foto%20dgn%20KTP*%0A*Share%20Lokasi%20Via%20WA*" class="btn-buy mt-1">Berlangganan</a>
-                  </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="100">
-                  <div class="box">
-                    <span class="featured">Promo</span>
-      
-                    <h3>Paket 2P Internet + TV</h3>
-                    
-                    <img src="assets/img/50mbps.PNG" class="img-fluid " style="margin-top: -15px;">
-                    <div class="price"><sup>Rp.</sup>560.000<span>/bln</span></div>
-                    <!-- <p>Cocok digunakan untuk 10 - 12 perangkat sekaligus</p> -->
-                    <ul>
-                      <li>*Biaya pemasangan Rp. 500.000 <i>(dibayar setelah pemasangan)</i></li>
-                      <li>*PPN 10%</li>
-                    </ul>
-                    <a href="https://api.whatsapp.com/send?phone=6282290129248&text=Form Pemasangan Indihome%0ANama%20Lengkap%20%3A%0AAlamat%20Lengkap%20Pemasangan%20%3A%0ANo%20HP%20%3A%0AEmail%20%3A%0APaket%20Yang%20Dipilih%20%3A%0A*Foto%20KTP*%0A*Foto%20dgn%20KTP*%0A*Share%20Lokasi%20Via%20WA*" class="btn-buy mt-1">Berlangganan</a>
-                  </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="100">
-                  <div class="box">
-                    <span class="featured">Promo</span>
-      
-                    <h3>Paket 2P Internet + TV</h3>
-                    
-                    <img src="assets/img/100mbps.PNG" class="img-fluid " style="margin-top: -15px;">
-                    <div class="price"><sup>Rp.</sup>915.000<span>/bln</span></div>
-                    <!-- <p>Cocok digunakan untuk 12 - 18 perangkat sekaligus</p> -->
-                    <ul>
-                      <li>*Biaya pemasangan Rp. 500.000 <i>(dibayar setelah pemasangan)</i></li>
-                      <li>*PPN 10%</li>
-                    </ul>
-                    <a href="https://api.whatsapp.com/send?phone=6282290129248&text=Form Pemasangan Indihome%0ANama%20Lengkap%20%3A%0AAlamat%20Lengkap%20Pemasangan%20%3A%0ANo%20HP%20%3A%0AEmail%20%3A%0APaket%20Yang%20Dipilih%20%3A%0A*Foto%20KTP*%0A*Foto%20dgn%20KTP*%0A*Share%20Lokasi%20Via%20WA*" class="btn-buy mt-1">Berlangganan</a>
-                  </div>
-                </div>
                 
-                <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="100">
+                @foreach ($paket_data->where('kategori_id',"$row->id") as $paket)
+                
+                <div class="col-lg-4 col-md-6 " data-aos="zoom-in" data-aos-delay="100">
+                    
                   <div class="box">
                     <span class="featured">Promo</span>
-      
-                    <h3>Paket 2P Internet + Telepon</h3>
+              
+                    <h3>{{$paket->nama}}</h3>
                     
                     <img src="assets/img/20mbps.PNG" class="img-fluid " style="margin-top: -15px;">
-                    <div class="price"><sup>Rp.</sup>315.000<span>/bln</span></div>
-                    <!-- <p>Cocok digunakan untuk 12 - 18 perangkat sekaligus</p> -->
-                    <ul>
-                      <li>*Biaya pemasangan Rp. 500.000 <i>(dibayar setelah pemasangan)</i></li>
-                      <li>*PPN 10%</li>
-                    </ul>
-                    <a href="https://api.whatsapp.com/send?phone=6282290129248&text=Form Pemasangan Indihome%0ANama%20Lengkap%20%3A%0AAlamat%20Lengkap%20Pemasangan%20%3A%0ANo%20HP%20%3A%0AEmail%20%3A%0APaket%20Yang%20Dipilih%20%3A%0A*Foto%20KTP*%0A*Foto%20dgn%20KTP*%0A*Share%20Lokasi%20Via%20WA*" class="btn-buy mt-1">Berlangganan</a>
-                  </div>
-                </div>
+                    <div class="price"><sup>Rp.</sup>{{$paket->harga}}<span>/bln</span></div>
 
-                <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="100">
-                  <div class="box">
-                    <span class="featured">Promo</span>
-      
-                    <h3>Paket 2P Internet + Telepon</h3>
-                    
-                    <img src="assets/img/30mbps.PNG" class="img-fluid " style="margin-top: -15px;">
-                    <div class="price"><sup>Rp.</sup>390.000<span>/bln</span></div>
-                    <!-- <p>Cocok digunakan untuk 12 - 18 perangkat sekaligus</p> -->
                     <ul>
-                      <li>*Biaya pemasangan Rp. 500.000 <i>(dibayar setelah pemasangan)</i></li>
+                      <li>*Biaya pemasangan Rp. {{$paket->harga_pemasangan}} <i>(dibayar setelah pemasangan)</i></li>
                       <li>*PPN 10%</li>
                     </ul>
                     <a href="https://api.whatsapp.com/send?phone=6282290129248&text=Form Pemasangan Indihome%0ANama%20Lengkap%20%3A%0AAlamat%20Lengkap%20Pemasangan%20%3A%0ANo%20HP%20%3A%0AEmail%20%3A%0APaket%20Yang%20Dipilih%20%3A%0A*Foto%20KTP*%0A*Foto%20dgn%20KTP*%0A*Share%20Lokasi%20Via%20WA*" class="btn-buy mt-1">Berlangganan</a>
-                  </div>
-                </div>
 
-                <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="100">
-                  <div class="box">
-                    <span class="featured">Promo</span>
-      
-                    <h3>Paket 2P Internet + Telepon</h3>
-                    
-                    <img src="assets/img/40mbps.PNG" class="img-fluid " style="margin-top: -15px;">
-                    <div class="price"><sup>Rp.</sup>465.000<span>/bln</span></div>
-                    <!-- <p>Cocok digunakan untuk 12 - 18 perangkat sekaligus</p> -->
-                    <ul>
-                      <li>*Biaya pemasangan Rp. 500.000 <i>(dibayar setelah pemasangan)</i></li>
-                      <li>*PPN 10%</li>
-                    </ul>
-                    <a href="https://api.whatsapp.com/send?phone=6282290129248&text=Form Pemasangan Indihome%0ANama%20Lengkap%20%3A%0AAlamat%20Lengkap%20Pemasangan%20%3A%0ANo%20HP%20%3A%0AEmail%20%3A%0APaket%20Yang%20Dipilih%20%3A%0A*Foto%20KTP*%0A*Foto%20dgn%20KTP*%0A*Share%20Lokasi%20Via%20WA*" class="btn-buy mt-1">Berlangganan</a>
                   </div>
-                </div>
 
-                <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="100">
-                  <div class="box">
-                    <span class="featured">Promo</span>
-      
-                    <h3>Paket 2P Internet + Telepon</h3>
-                    
-                    <img src="assets/img/50mbps.PNG" class="img-fluid " style="margin-top: -15px;">
-                    <div class="price"><sup>Rp.</sup>530.000<span>/bln</span></div>
-                    <!-- <p>Cocok digunakan untuk 12 - 18 perangkat sekaligus</p> -->
-                    <ul>
-                      <li>*Biaya pemasangan Rp. 500.000 <i>(dibayar setelah pemasangan)</i></li>
-                      <li>*PPN 10%</li>
-                    </ul>
-                    <a href="https://api.whatsapp.com/send?phone=6282290129248&text=Form Pemasangan Indihome%0ANama%20Lengkap%20%3A%0AAlamat%20Lengkap%20Pemasangan%20%3A%0ANo%20HP%20%3A%0AEmail%20%3A%0APaket%20Yang%20Dipilih%20%3A%0A*Foto%20KTP*%0A*Foto%20dgn%20KTP*%0A*Share%20Lokasi%20Via%20WA*" class="btn-buy mt-1">Berlangganan</a>
-                  </div>
                 </div>
-
-                <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="100">
-                  <div class="box">
-                    <span class="featured">Promo</span>
-      
-                    <h3>Paket 2P Internet + Telepon</h3>
-                    
-                    <img src="assets/img/100mbps.PNG" class="img-fluid " style="margin-top: -15px;">
-                    <div class="price"><sup>Rp.</sup>885.000<span>/bln</span></div>
-                    <!-- <p>Cocok digunakan untuk 12 - 18 perangkat sekaligus</p> -->
-                    <ul>
-                      <li>*Biaya pemasangan Rp. 500.000 <i>(dibayar setelah pemasangan)</i></li>
-                      <li>*PPN 10%</li>
-                    </ul>
-                    <a href="https://api.whatsapp.com/send?phone=6282290129248&text=Form Pemasangan Indihome%0ANama%20Lengkap%20%3A%0AAlamat%20Lengkap%20Pemasangan%20%3A%0ANo%20HP%20%3A%0AEmail%20%3A%0APaket%20Yang%20Dipilih%20%3A%0A*Foto%20KTP*%0A*Foto%20dgn%20KTP*%0A*Share%20Lokasi%20Via%20WA*" class="btn-buy mt-1">Berlangganan</a>
-                  </div>
-                </div>
-      
-              </div>
-      
-            </div>
-      
-          </section>
-        </div>
-        <!-- paket 3P -->
-        <div class="col-12 portfolio-item filter-web">
-          <section id="pricing" class="pricing">
-
-            <div class="container" data-aos="fade-up">
-      
-              <div class="row gy-4" data-aos="fade-left">
-      
-                <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="100">
-                  <div class="box">
-                    <span class="featured">Promo</span>
-      
-                    <h3>Reguler IndiHome 3P Internet + Phone + TV</h3>
-                    
-                    <img src="assets/img/20mbps.PNG" class="img-fluid " style="margin-top: -15px;">
-                    <div class="price"><sup>Rp.</sup>375.000<span>/bln</span></div>
-                    <!-- <p>Cocok digunakan untuk 3 - 5 perangkat sekaligus</p> -->
-                    <ul>
-                      <li>*Biaya pemasangan Rp. 500.000 <i>(dibayar setelah pemasangan)</i></li>
-                      <li>*PPN 10%</li>
-                    </ul>
-                    <a href="https://api.whatsapp.com/send?phone=6282290129248&text=Form Pemasangan Indihome%0ANama%20Lengkap%20%3A%0AAlamat%20Lengkap%20Pemasangan%20%3A%0ANo%20HP%20%3A%0AEmail%20%3A%0APaket%20Yang%20Dipilih%20%3A%0A*Foto%20KTP*%0A*Foto%20dgn%20KTP*%0A*Share%20Lokasi%20Via%20WA*" class="btn-buy mt-1">Berlangganan</a>
-                  </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="100">
-                  <div class="box">
-                    <span class="featured">Promo</span>
-      
-                    <h3>Reguler IndiHome 3P Internet + Phone + TV</h3>
-                    
-                    <img src="assets/img/30mbps.PNG" class="img-fluid " style="margin-top: -15px;">
-                    <div class="price"><sup>Rp.</sup>450.000<span>/bln</span></div>
-                    <!-- <p>Cocok digunakan untuk 5 - 7 perangkat sekaligus</p> -->
-                    <ul>
-                      <li>*Biaya pemasangan Rp. 500.000 <i>(dibayar setelah pemasangan)</i></li>
-                      <li>*PPN 10%</li>
-                    </ul>
-                    <a href="https://api.whatsapp.com/send?phone=6282290129248&text=Form Pemasangan Indihome%0ANama%20Lengkap%20%3A%0AAlamat%20Lengkap%20Pemasangan%20%3A%0ANo%20HP%20%3A%0AEmail%20%3A%0APaket%20Yang%20Dipilih%20%3A%0A*Foto%20KTP*%0A*Foto%20dgn%20KTP*%0A*Share%20Lokasi%20Via%20WA*" class="btn-buy mt-1">Berlangganan</a>
-                  </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="100">
-                  <div class="box">
-                    <!-- <span class="featured">Promo</span> -->
-      
-                    <h3>Reguler Indihome 3P Internet + Phone + TV</h3>
-                    
-                    <img src="assets/img/40mbps.PNG" class="img-fluid " style="margin-top: -15px;">
-                    <div class="price"><sup>Rp.</sup>525.000<span>/bln</span></div>
-                    <!-- <p>Cocok digunakan untuk 7 - 10 perangkat sekaligus</p> -->
-                    <ul>
-                      <li>*Biaya pemasangan Rp. 500.000 <i>(dibayar setelah pemasangan)</i></li>
-                      <li>*PPN 10%</li>
-                    </ul>
-                    <a href="https://api.whatsapp.com/send?phone=6282290129248&text=Form Pemasangan Indihome%0ANama%20Lengkap%20%3A%0AAlamat%20Lengkap%20Pemasangan%20%3A%0ANo%20HP%20%3A%0AEmail%20%3A%0APaket%20Yang%20Dipilih%20%3A%0A*Foto%20KTP*%0A*Foto%20dgn%20KTP*%0A*Share%20Lokasi%20Via%20WA*" class="btn-buy mt-1">Berlangganan</a>
-                  </div>
-                </div>
-      
-                <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="100">
-                  <div class="box">
-                    <span class="featured">Promo</span>
-      
-                    <h3>Reguler IndiHome 3P Internet + Phone + TV</h3>
-                    
-                    <img src="assets/img/50mbps.PNG" class="img-fluid " style="margin-top: -15px;">
-                    <div class="price"><sup>Rp.</sup>590.000<span>/bln</span></div>
-                    <!-- <p>Cocok digunakan untuk 10 - 12 perangkat sekaligus</p> -->
-                    <ul>
-                      <li>*Biaya pemasangan Rp. 500.000 <i>(dibayar setelah pemasangan)</i></li>
-                      <li>*PPN 10%</li>
-                    </ul>
-                    <a href="https://api.whatsapp.com/send?phone=6282290129248&text=Form Pemasangan Indihome%0ANama%20Lengkap%20%3A%0AAlamat%20Lengkap%20Pemasangan%20%3A%0ANo%20HP%20%3A%0AEmail%20%3A%0APaket%20Yang%20Dipilih%20%3A%0A*Foto%20KTP*%0A*Foto%20dgn%20KTP*%0A*Share%20Lokasi%20Via%20WA*" class="btn-buy mt-1">Berlangganan</a>
-                  </div>
-                </div>
-      
-                <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="100">
-                  <div class="box">
-                    <span class="featured">Promo</span>
-      
-                    <h3>Reguler IndiHome 3P Internet + Phone + TV</h3>
-                    
-                    <img src="assets/img/100mbps.PNG" class="img-fluid " style="margin-top: -15px;">
-                    <div class="price"><sup>Rp.</sup>945.000<span>/bln</span></div>
-                    <!-- <p>Cocok digunakan untuk 12 - 18 perangkat sekaligus</p> -->
-                    <ul>
-                      <li>*Biaya pemasangan Rp. 500.000 <i>(dibayar setelah pemasangan)</i></li>
-                      <li>*PPN 10%</li>
-                    </ul>
-                    <a href="https://api.whatsapp.com/send?phone=6282290129248&text=Form Pemasangan Indihome%0ANama%20Lengkap%20%3A%0AAlamat%20Lengkap%20Pemasangan%20%3A%0ANo%20HP%20%3A%0AEmail%20%3A%0APaket%20Yang%20Dipilih%20%3A%0A*Foto%20KTP*%0A*Foto%20dgn%20KTP*%0A*Share%20Lokasi%20Via%20WA*" class="btn-buy mt-1">Berlangganan</a>
-                  </div>
-                </div>
-      
-              </div>
-      
-            </div>
-      
-          </section>
-        </div>
-        <!-- paket gamer -->
-        <div class="col-12 portfolio-item filter-card">
-          <section id="pricing" class="pricing">
-
-            <div class="container" data-aos="fade-up">
-      
-              <div class="row gy-4" data-aos="fade-left">
-      
-                <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="100">
-                  <div class="box">
-                    <span class="featured">Promo</span>
-      
-                    <h3>Paket Gamers</h3>
-                    
-                    <img src="assets/img/20mbps.PNG" class="img-fluid " style="margin-top: -15px;">
-                    <div class="price"><sup>Rp.</sup>315.000<span>/bln</span></div>
-                    <!-- <p>Cocok digunakan untuk 3 - 5 perangkat sekaligus</p> -->
-                    <ul>
-                      <li>*Biaya pemasangan Rp. 500.000 <i>(dibayar setelah pemasangan)</i></li>
-                      <li>*PPN 10%</li>
-                    </ul>
-                    <a href="https://api.whatsapp.com/send?phone=6282290129248&text=Form Pemasangan Indihome%0ANama%20Lengkap%20%3A%0AAlamat%20Lengkap%20Pemasangan%20%3A%0ANo%20HP%20%3A%0AEmail%20%3A%0APaket%20Yang%20Dipilih%20%3A%0A*Foto%20KTP*%0A*Foto%20dgn%20KTP*%0A*Share%20Lokasi%20Via%20WA*" class="btn-buy mt-1">Berlangganan</a>
-                  </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="100">
-                  <div class="box">
-                    <span class="featured">Promo</span>
-      
-                    <h3>Paket Gamers</h3>
-                    
-                    <img src="assets/img/50mbps.PNG" class="img-fluid " style="margin-top: -15px;">
-                    <div class="price"><sup>Rp.</sup>600.000<span>/bln</span></div>
-                    <!-- <p>Cocok digunakan untuk 3 - 5 perangkat sekaligus</p> -->
-                    <ul>
-                      <li>*Biaya pemasangan Rp. 500.000 <i>(dibayar setelah pemasangan)</i></li>
-                      <li>*PPN 10%</li>
-                    </ul>
-                    <a href="https://api.whatsapp.com/send?phone=6282290129248&text=Form Pemasangan Indihome%0ANama%20Lengkap%20%3A%0AAlamat%20Lengkap%20Pemasangan%20%3A%0ANo%20HP%20%3A%0AEmail%20%3A%0APaket%20Yang%20Dipilih%20%3A%0A*Foto%20KTP*%0A*Foto%20dgn%20KTP*%0A*Share%20Lokasi%20Via%20WA*" class="btn-buy mt-1">Berlangganan</a>
-                  </div>
-                </div>
-      
-                <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="100">
-                  <div class="box">
-                    <span class="featured">Promo</span>
-      
-                    <h3>Paket Gamers</h3>
-                    
-                    <img src="assets/img/100mbps.PNG" class="img-fluid " style="margin-top: -15px;">
-                    <div class="price"><sup>Rp.</sup>955.000<span>/bln</span></div>
-                    <!-- <p>Cocok digunakan untuk 3 - 5 perangkat sekaligus</p> -->
-                    <ul>
-                      <li>*Biaya pemasangan Rp. 500.000 <i>(dibayar setelah pemasangan)</i></li>
-                      <li>*PPN 10%</li>
-                    </ul>
-                    <a href="https://api.whatsapp.com/send?phone=6282290129248&text=Form Pemasangan Indihome%0ANama%20Lengkap%20%3A%0AAlamat%20Lengkap%20Pemasangan%20%3A%0ANo%20HP%20%3A%0AEmail%20%3A%0APaket%20Yang%20Dipilih%20%3A%0A*Foto%20KTP*%0A*Foto%20dgn%20KTP*%0A*Share%20Lokasi%20Via%20WA*" class="btn-buy mt-1">Berlangganan</a>
-                  </div>
-                </div>
+                @endforeach
 
               </div>
       
             </div>
-      
+    
           </section>
         </div>
-        <!-- paket pelajar -->
-        <div class="col-12 portfolio-item filter-pelajar">
-          <section id="pricing" class="pricing">
-
-            <div class="container" data-aos="fade-up">
-      
-              <div class="row gy-4" data-aos="fade-left">
-      
-                <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="100">
-                  <div class="box">
-                    <span class="featured">Promo</span>
-      
-                    <h3>Paket Pelajar</h3>
-                    
-                    <img src="assets/img/30mbps.PNG" class="img-fluid " style="margin-top: -15px;">
-                    <div class="price"><sup>Rp.</sup>275.000<span>/bln</span></div>
-                    <!-- <p>Cocok digunakan untuk 3 - 5 perangkat sekaligus</p> -->
-                    <ul>
-                      <li>*Biaya pemasangan Rp. 500.000 <i>(dibayar setelah pemasangan)</i></li>
-                      <li>*PPN 10%</li>
-                    </ul>
-                    <a href="https://api.whatsapp.com/send?phone=6282290129248&text=Form Pemasangan Indihome%0ANama%20Lengkap%20%3A%0AAlamat%20Lengkap%20Pemasangan%20%3A%0ANo%20HP%20%3A%0AEmail%20%3A%0APaket%20Yang%20Dipilih%20%3A%0A*Foto%20KTP*%0A*Foto%20dgn%20KTP*%0A*Share%20Lokasi%20Via%20WA*" class="btn-buy mt-1">Berlangganan</a>
-                  </div>
-                </div>
-
-              </div>
-      
-            </div>
-      
-          </section>
-        </div>
-
-        <!-- paket promo 1 -->
-        <div class="col-12 portfolio-item filter-promo1">
-          <section id="pricing" class="pricing">
-
-            <div class="container" data-aos="fade-up">
-      
-              <div class="row gy-4" data-aos="fade-left">
-      
-                <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="100">
-                  <div class="box">
-                    <span class="featured">Promo</span>
-      
-                    <h3>Paket 2P Internet + Telepon (Dengan Akses Disney+ Hotstar)</h3>
-                    
-                    <img src="assets/img/30mbps.PNG" class="img-fluid " style="margin-top: -15px;">
-                    <div class="price"><sup>Rp.</sup>335.000<span>/bln</span></div>
-                    <!-- <p>Cocok digunakan untuk 3 - 5 perangkat sekaligus</p> -->
-                    <ul>
-                      <li>*Biaya pemasangan Rp. 500.000 <i>(dibayar setelah pemasangan)</i></li>
-                      <li>*PPN 10%</li>
-                    </ul>
-                    <a href="https://api.whatsapp.com/send?phone=6282290129248&text=Form Pemasangan Indihome%0ANama%20Lengkap%20%3A%0AAlamat%20Lengkap%20Pemasangan%20%3A%0ANo%20HP%20%3A%0AEmail%20%3A%0APaket%20Yang%20Dipilih%20%3A%0A*Foto%20KTP*%0A*Foto%20dgn%20KTP*%0A*Share%20Lokasi%20Via%20WA*" class="btn-buy mt-1">Berlangganan</a>
-                  </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="100">
-                  <div class="box">
-                    <span class="featured">Promo</span>
-      
-                    <h3>Paket 2P Internet + Telepon (Dengan Akses Disney+ Hotstar)</h3>
-                    
-                    <img src="assets/img/50mbps.PNG" class="img-fluid " style="margin-top: -15px;">
-                    <div class="price"><sup>Rp.</sup>475.000<span>/bln</span></div>
-                    <!-- <p>Cocok digunakan untuk 3 - 5 perangkat sekaligus</p> -->
-                    <ul>
-                      <li>*Biaya pemasangan Rp. 500.000 <i>(dibayar setelah pemasangan)</i></li>
-                      <li>*PPN 10%</li>
-                    </ul>
-                    <a href="https://api.whatsapp.com/send?phone=6282290129248&text=Form Pemasangan Indihome%0ANama%20Lengkap%20%3A%0AAlamat%20Lengkap%20Pemasangan%20%3A%0ANo%20HP%20%3A%0AEmail%20%3A%0APaket%20Yang%20Dipilih%20%3A%0A*Foto%20KTP*%0A*Foto%20dgn%20KTP*%0A*Share%20Lokasi%20Via%20WA*" class="btn-buy mt-1">Berlangganan</a>
-                  </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="100">
-                  <div class="box">
-                    <span class="featured">Promo</span>
-      
-                    <h3>Paket 2P Internet + Telepon (Dengan Akses Disney+ Hotstar)</h3>
-                    
-                    <img src="assets/img/100mbps.PNG" class="img-fluid " style="margin-top: -15px;">
-                    <div class="price"><sup>Rp.</sup>795.000<span>/bln</span></div>
-                    <!-- <p>Cocok digunakan untuk 3 - 5 perangkat sekaligus</p> -->
-                    <ul>
-                      <li>*Biaya pemasangan Rp. 500.000 <i>(dibayar setelah pemasangan)</i></li>
-                      <li>*PPN 10%</li>
-                    </ul>
-                    <a href="https://api.whatsapp.com/send?phone=6282290129248&text=Form Pemasangan Indihome%0ANama%20Lengkap%20%3A%0AAlamat%20Lengkap%20Pemasangan%20%3A%0ANo%20HP%20%3A%0AEmail%20%3A%0APaket%20Yang%20Dipilih%20%3A%0A*Foto%20KTP*%0A*Foto%20dgn%20KTP*%0A*Share%20Lokasi%20Via%20WA*" class="btn-buy mt-1">Berlangganan</a>
-                  </div>
-                </div>
-
-              </div>
-      
-            </div>
-      
-          </section>
-        </div>
-
-        <!-- paket promo 2 -->
-        <div class="col-12 portfolio-item filter-promo2">
-          <section id="pricing" class="pricing">
-
-            <div class="container" data-aos="fade-up">
-      
-              <div class="row gy-4" data-aos="fade-left">
-      
-                <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="100">
-                  <div class="box">
-                    <span class="featured">Promo</span>
-      
-                    <h3>Paket 3P (Dengan Akses Disney+ Hotstar)</h3>
-                    
-                    <img src="assets/img/30mbps.PNG" class="img-fluid " style="margin-top: -15px;">
-                    <div class="price"><sup>Rp.</sup>385.000<span>/bln</span></div>
-                    <!-- <p>Cocok digunakan untuk 3 - 5 perangkat sekaligus</p> -->
-                    <ul>
-                      <li>*Biaya pemasangan Rp. 500.000 <i>(dibayar setelah pemasangan)</i></li>
-                      <li>*PPN 10%</li>
-                    </ul>
-                    <a href="https://api.whatsapp.com/send?phone=6282290129248&text=Form Pemasangan Indihome%0ANama%20Lengkap%20%3A%0AAlamat%20Lengkap%20Pemasangan%20%3A%0ANo%20HP%20%3A%0AEmail%20%3A%0APaket%20Yang%20Dipilih%20%3A%0A*Foto%20KTP*%0A*Foto%20dgn%20KTP*%0A*Share%20Lokasi%20Via%20WA*" class="btn-buy mt-1">Berlangganan</a>
-                  </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="100">
-                  <div class="box">
-                    <span class="featured">Promo</span>
-      
-                    <h3>Paket 3P (Dengan Akses Disney+ Hotstar)</h3>
-                    
-                    <img src="assets/img/50mbps.PNG" class="img-fluid " style="margin-top: -15px;">
-                    <div class="price"><sup>Rp.</sup>615.000<span>/bln</span></div>
-                    <!-- <p>Cocok digunakan untuk 3 - 5 perangkat sekaligus</p> -->
-                    <ul>
-                      <li>*Biaya pemasangan Rp. 500.000 <i>(dibayar setelah pemasangan)</i></li>
-                      <li>*PPN 10%</li>
-                    </ul>
-                    <a href="https://api.whatsapp.com/send?phone=6282290129248&text=Form Pemasangan Indihome%0ANama%20Lengkap%20%3A%0AAlamat%20Lengkap%20Pemasangan%20%3A%0ANo%20HP%20%3A%0AEmail%20%3A%0APaket%20Yang%20Dipilih%20%3A%0A*Foto%20KTP*%0A*Foto%20dgn%20KTP*%0A*Share%20Lokasi%20Via%20WA*" class="btn-buy mt-1">Berlangganan</a>
-                  </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="100">
-                  <div class="box">
-                    <span class="featured">Promo</span>
-      
-                    <h3>Paket 3P (Dengan Akses Disney+ Hotstar)</h3>
-                    
-                    <img src="assets/img/100mbps.PNG" class="img-fluid " style="margin-top: -15px;">
-                    <div class="price"><sup>Rp.</sup>965.000<span>/bln</span></div>
-                    <!-- <p>Cocok digunakan untuk 3 - 5 perangkat sekaligus</p> -->
-                    <ul>
-                      <li>*Biaya pemasangan Rp. 500.000 <i>(dibayar setelah pemasangan)</i></li>
-                      <li>*PPN 10%</li>
-                    </ul>
-                    <a href="https://api.whatsapp.com/send?phone=6282290129248&text=Form Pemasangan Indihome%0ANama%20Lengkap%20%3A%0AAlamat%20Lengkap%20Pemasangan%20%3A%0ANo%20HP%20%3A%0AEmail%20%3A%0APaket%20Yang%20Dipilih%20%3A%0A*Foto%20KTP*%0A*Foto%20dgn%20KTP*%0A*Share%20Lokasi%20Via%20WA*" class="btn-buy mt-1">Berlangganan</a>
-                  </div>
-                </div>
-
-              </div>
-      
-            </div>
-      
-          </section>
-        </div>
+        @endforeach
 
       </div>
 

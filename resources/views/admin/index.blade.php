@@ -21,9 +21,9 @@
               <h5 class="card-title">Data Paket Indihome</h5>
               <div class="card col-md-2">
                 <a href="{{route('paket.create')}}" class="btn btn-sm btn-primary">Tambah data</a>
-                @include('partial.alert')
               </div>
-
+              
+              @include('partial.alert')
 
               <!-- Default Table -->
               <table class="table">

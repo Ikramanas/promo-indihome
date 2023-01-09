@@ -17,7 +17,7 @@ class PaketController extends Controller
     public function index()
     {
         $title = 'Dashboard | Admin';
-        $data = Paket_data::orderBy('created_at', 'desc')->Paginate(5)->withQueryString();
+        $data = Paket_data::orderBy('created_at', 'desc')->Paginate(20)->withQueryString();
         return view('admin.index', compact(['title','data']));
     }
 
@@ -128,10 +128,10 @@ class PaketController extends Controller
         if ($request->hasFile('image')) {
             //upload image baru
             $image = round(microtime(true) * 1000).'-'.str_replace(' ','-',$request->file('image')->getClientOriginalName());
-            $request->file('image')->move(public_path('assets/admin/img'), $image);
+            $request->file('image')->move(public_path('admin/assets/img'), $image);
 
             //delete image lama
-            Storage::delete('assets/admin/img'.$image);
+            Storage::delete('admin/assets/img'.$image);
 
             //update data
             $paket_data->update([
@@ -156,7 +156,7 @@ class PaketController extends Controller
             ]);     
         }
         //setelah melakukan update kembali ke index
-        return redirect()->route('post.index')->with(['success' => 'Data berhasil diubah!']); 
+        return redirect()->route('paket.index')->with(['success' => 'Data berhasil diubah!']); 
     }
 
     /**

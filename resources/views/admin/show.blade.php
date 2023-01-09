@@ -7,9 +7,9 @@
 
         <div class="card">
           <div class="card-body profile-card pt-4 d-flex flex-column align-items-center">
-
-            <img src="assets/img/profile-img.jpg" alt="Profile" class="rounded-circle">
-            <h2>Kevin Anderson</h2>
+            {{dd($data->image)}}
+            <img src="assets/img/{{$data->image}}" alt="gambar" class="rounded-circle">
+            <h2>{{$data->nama}}</h2>
             <h3>Web Designer</h3>
             <div class="social-links mt-2">
               <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
@@ -53,38 +53,43 @@
                 <h5 class="card-title">Detail Paket</h5>
 
                 <div class="row">
-                  <div class="col-lg-3 col-md-4 label ">Full Name</div>
-                  <div class="col-lg-9 col-md-8">Kevin Anderson</div>
+                  <div class="col-lg-3 col-md-4 label ">Nama Paket</div>
+                  <div class="col-lg-9 col-md-8">{{$data->nama}}</div>
                 </div>
 
                 <div class="row">
-                  <div class="col-lg-3 col-md-4 label">Company</div>
-                  <div class="col-lg-9 col-md-8">Lueilwitz, Wisoky and Leuschke</div>
+                  <div class="col-lg-3 col-md-4 label">Kecepatan</div>
+                  <div class="col-lg-9 col-md-8">{{$data->kecepatan}} mbps</div>
                 </div>
 
                 <div class="row">
-                  <div class="col-lg-3 col-md-4 label">Job</div>
-                  <div class="col-lg-9 col-md-8">Web Designer</div>
+                  <div class="col-lg-3 col-md-4 label">Kategori</div>
+                  <div class="col-lg-9 col-md-8">{{$data->kategori->nama}}</div>
                 </div>
 
                 <div class="row">
-                  <div class="col-lg-3 col-md-4 label">Country</div>
-                  <div class="col-lg-9 col-md-8">USA</div>
+                  <div class="col-lg-3 col-md-4 label">Harga</div>
+                  <div class="col-lg-9 col-md-8">{{$data->harga}}</div>
                 </div>
 
                 <div class="row">
-                  <div class="col-lg-3 col-md-4 label">Address</div>
-                  <div class="col-lg-9 col-md-8">A108 Adam Street, New York, NY 535022</div>
+                  <div class="col-lg-3 col-md-4 label">Harga Pemasangan</div>
+                  <div class="col-lg-9 col-md-8">{{$data->harga_pemasangan}}</div>
                 </div>
 
                 <div class="row">
-                  <div class="col-lg-3 col-md-4 label">Phone</div>
-                  <div class="col-lg-9 col-md-8">(436) 486-3538 x29071</div>
+                  <div class="col-lg-3 col-md-4 label">label</div>
+                  <div class="col-lg-9 col-md-8">{{$data->label}}</div>
                 </div>
 
                 <div class="row">
-                  <div class="col-lg-3 col-md-4 label">Email</div>
-                  <div class="col-lg-9 col-md-8">k.anderson@example.com</div>
+                  <div class="col-lg-3 col-md-4 label">Ditambahkan pada</div>
+                  <div class="col-lg-9 col-md-8">{{$data->created_at}}</div>
+                </div>
+                
+                <div class="row">
+                  <div class="col-lg-3 col-md-4 label">Diubah pada</div>
+                  <div class="col-lg-9 col-md-8">{{$data->updated_at}}</div>
                 </div>
 
               </div>

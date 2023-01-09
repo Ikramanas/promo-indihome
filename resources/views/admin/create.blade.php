@@ -5,7 +5,7 @@
         <h1>{{$title}}</h1> 
         <nav>
         <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href={{route('home.index')}}>Dashboard</a></li>
+            <li class="breadcrumb-item"><a href={{route('paket.index')}}>Dashboard</a></li>
             {{-- <li class="breadcrumb-item"><a href={{route('post.index')}}>All data</a></li> --}}
             <li class="breadcrumb-item active">{{$title}}</li>
         </ol>
@@ -65,7 +65,7 @@
                                     <option selected>Open this select menu</option>
                                     {{-- {{dd($category)}} --}}
                                     @foreach ($category as $row)
-                                    <option value="{{$row->id}}"> {{$row->name}} </option>
+                                    <option value="{{$row->id}}"> {{$row->nama}} </option>
                                     @endforeach 
                                 </select>
                             </div>

@@ -65,7 +65,7 @@
                                     <option >Open this select menu</option>
                                     {{-- {{dd($category)}} --}}
                                     @foreach ($category as $row)
-                                    <option value="{{$row->id}}" selected > {{$row->name}} </option>
+                                    <option value="{{$row->id}}" selected > {{$row->nama}} </option>
                                     @endforeach 
                                 </select>
                             </div>

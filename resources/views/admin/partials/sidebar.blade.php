@@ -54,8 +54,8 @@
       </li><!-- End Components Nav --> --}}
 
       <li class="nav-item">
-        <a class="nav-link collapsed" data-bs-target="#forms-nav" href=#>
-          <i class="bi bi-journal-text"></i><span>Category</span>
+        <a class="nav-link collapsed" data-bs-target="#forms-nav" href={{route('kategori.index')}}>
+          <i class="bi bi-journal-text"></i><span>Kategori</span>
         </a>
       </li>
 

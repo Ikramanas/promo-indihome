@@ -53,19 +53,19 @@ class PaketController extends Controller
         if ($validator->fails()) {
             return redirect()->route("paket.create")->withErrors($validator)->withInput();
         }
-
+        
         if ($request->hasfile('image')) {            
             $image = round(microtime(true) * 1000).'-'.str_replace(' ','-',$request->file('image')->getClientOriginalName());
             $request->file('image')->move(public_path('admin/assets/img'), $image);
-            // dd($request->category);
-                Paket_data::create([
-                    'image'  => $image,
-                    'nama' => $request->nama,     
-                    'kecepatan' => $request->kecepatan,     
-                    'kategori_id' => $request->kategori_id,
-                    'harga' => $request->harga,
-                    'harga_pemasangan' => $request->harga_pemasangan,
-                    'label' => $request->label,
+            // dd($request->hasfile('image'));
+            Paket_data::create([
+                    'image'             => $image,
+                    'nama'              => $request->nama,     
+                    'kecepatan'         => $request->kecepatan,     
+                    'kategori_id'       => $request->kategori_id,
+                    'harga'             => $request->harga,
+                    'harga_pemasangan'  => $request->harga_pemasangan,
+                    'label'             => $request->label,
                 ]);
             // return redirect()->route('paket.create')->with('success','Berhasil menyimpan data');
         }else{

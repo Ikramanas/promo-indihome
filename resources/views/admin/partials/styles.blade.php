@@ -21,6 +21,9 @@
   <!-- Template Main CSS File -->
   <link href={{asset('admin/assets/css/style.css')}} rel="stylesheet">
 
+  {{-- sweet alert --}}
+  {{-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous"> --}}
+
   <!-- =======================================================
   * Template Name: Nice{{asset(Admin - v2.4.1
   * Template URL: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/

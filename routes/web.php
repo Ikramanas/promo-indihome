@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PaketController;
+use App\Http\Controllers\KategoriController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,3 +19,4 @@ use App\Http\Controllers\PaketController;
 
 Route::resource('/home', HomeController::class);  
 Route::resource('/paket', PaketController::class);  
+Route::resource('/kategori', KategoriController::class);  

@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Kategori extends Model
 {
     use HasFactory;
+    protected $fillable = ['id','nama'];
 
     public function Paket_data()
     {

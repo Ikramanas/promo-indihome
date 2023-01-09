@@ -9,6 +9,7 @@ class Paket_data extends Model
 {
     use HasFactory;
     protected $fillable = [
+        'image',
         'nama',
         'kecepatan',
         'harga',

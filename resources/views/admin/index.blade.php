@@ -21,9 +21,9 @@
               <h5 class="card-title">Data Paket Indihome</h5>
               <div class="card col-md-2">
                 <a href="{{route('paket.create')}}" class="btn btn-sm btn-primary">Tambah data</a>
+                @include('partial.alert')
               </div>
 
-              @include('partial.alert')
 
               <!-- Default Table -->
               <table class="table">
@@ -34,6 +34,7 @@
                     <th scope="col">Kecepatan</th>
                     <th scope="col">Harga</th>
                     <th scope="col">Kategori</th>
+                    <th scope="col">image</th>
                     <th scope="col">Aksi</th>
                   </tr>
                 </thead>
@@ -42,11 +43,12 @@
                     @foreach ($data as $rows=> $row )
                     {{-- {{dd($row->kategori_id);}} --}}
                     <tr>
-                        <th scope="row">{{1 + $rows}}</th>
+                        <th scope="row">{{$data->firstItem() + $rows}}</th>
                         <td>{{$row->nama}}</td>
                         <td>{{$row->kecepatan}}</td>
                         <td>{{$row->harga}}</td>
-                        <td>{{$row->kategori_id}}</td>
+                        <td>{{$row->kategori->nama}}</td>
+                        <td>{{$row->image}}</td>
                         <td>
                         <a href={{route("paket.show",$row->id)}} style="color: black;"> 
                             <button type="button" class="btn btn-show"><i class="bi bi-eye-fill"></i></button>
@@ -54,21 +56,40 @@
                         <form action="{{route('paket.destroy' ,$row->id)}}" method="post">
                           @csrf
                           @method('DELETE')   
-                          <button type="submit" class="btn btn-delete d-flex"><i class="bi bi-trash-fill"></i></button>
+                          <button type="submit" onclick="swal_hapus()" class="btn btn-delete d-flex"><i class="bi bi-trash-fill"></i></button>
                         </form>    
                       </td>
                       </tr>
                     @endforeach
                 </tbody>
-                </table>
-
-                {{$data->links()}}
-      
-            <!-- End Default Table Example -->
-                </div>
+              </table>
+              
+              
+              <!-- End Default Table Example -->
+              {{$data->links()}}
             </div>
+          </div>
         </div>
-    </div>
-</section>
+      </div>
+    </section>
     
-@endsection
+    <script>
+      swal_hapus({
+      title: "Apakah anda yakin ingin menghapus?",
+      // text: "Sekali terhapus anda tidak!",
+      icon: "warning",
+      buttons: true,
+      dangerMode: true,
+    })
+    .then((willDelete) => {
+      if (willDelete) {
+        swal("Poof! Your imaginary file has been deleted!", {
+          icon: "success",
+        });
+      } else {
+        swal("Your imaginary file is safe!");
+      }
+    });
+    </script>
+    
+    @endsection

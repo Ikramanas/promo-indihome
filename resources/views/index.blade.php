@@ -69,8 +69,23 @@
         
       </header>
 
+      {{-- <div class="row" data-aos="fade-up" data-aos-delay="100">
+        <div class=" col-lg-12 d-flex justify-content-center">
+          <ul id="portfolio-flters">
+            <li data-filter="*" class="filter-active">Semua Paket</li>
+            <li data-filter=".filter-app">Paket 2P</li>
+            <li data-filter=".filter-web">Paket 3P</li>
+            <li data-filter=".filter-card">Paket Gamer</li>
+            <li data-filter=".filter-pelajar">Paket Pelajar</li>
+            <li data-filter=".filter-promo1">Promo Internet Telpon</li>
+            <li data-filter=".filter-promo2">Promo Internet + Telepon + TV</li>
+          </ul>
+        </div>
+      </div> --}}
+
+      {{-- PERCOBAAN TAB DINAMIS --}}
       <div class="row" data-aos="fade-up" data-aos-delay="100">
-        <div class="col-lg-12 d-flex justify-content-center">
+        <div class=" col-lg-12 d-flex justify-content-center">
           <ul id="portfolio-flters">
             <li data-filter="*" class="filter-active">Semua Paket</li>
             <li data-filter=".filter-app">Paket 2P</li>
@@ -82,6 +97,8 @@
           </ul>
         </div>
       </div>
+
+
 
       <div class="row gy-4 portfolio-container" data-aos="fade-up" data-aos-delay="200">
 

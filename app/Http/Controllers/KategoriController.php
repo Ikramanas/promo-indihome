@@ -3,8 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Kategori;
 
-class TransaksiController extends Controller
+class kategoriController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -13,7 +14,9 @@ class TransaksiController extends Controller
      */
     public function index()
     {
-        //
+        $title = 'kategori';
+        $data = Kategori::orderBy('id', 'desc')->paginate(10)->withQueryString();
+        return view('admin.kategori.index', compact(['data','title']));
     }
 
     /**
@@ -23,7 +26,7 @@ class TransaksiController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.kategori.create');
     }
 
     /**
@@ -34,7 +37,9 @@ class TransaksiController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        Kategori::create([
+            'name'  => $request->name
+        ]);
     }
 
     /**
@@ -56,7 +61,9 @@ class TransaksiController extends Controller
      */
     public function edit($id)
     {
-        //
+        $title = 'Edit kategori';
+        $data= Kategori::find($id);
+        return view('admin.kategori.edit', compact(['data','title']));
     }
 
     /**
@@ -66,9 +73,12 @@ class TransaksiController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Kategori $kategori)
     {
-        //
+        $kategori->update([
+            'name'     => $request->name,
+        ]);     
+        return redirect()->route('kategori.index')->with(['success' => 'Data berhasil diubah!']);
     }
 
     /**
@@ -79,6 +89,9 @@ class TransaksiController extends Controller
      */
     public function destroy($id)
     {
-        //
+        // dd($id);
+        $kategori = Kategori::find($id);
+        $kategori->delete();
+        return redirect()->route('kategori.index')->with(['success' => 'Data berhasil dihapus..']);
     }
 }

@@ -18,11 +18,11 @@ return new class extends Migration
             $table->string('nama');
             $table->string('kecepatan');
             $table->string('kategori_id');
-            $table->tinyInteger('harga');
-            $table->tinyInteger('harga_pemasangan');
+            $table->Integer('harga');
+            $table->Integer('harga_pemasangan');
             $table->string('label');
             $table->string('image');
-            $table->tinyInteger('ppn');
+            $table->Integer('ppn');
             $table->timestamps();
         });
     }

@@ -52,9 +52,9 @@
                         </div>
                         
                         <div class="row mb-3">
-                            <label for="inputText" class="col-sm-2 col-form-label" >Kecepatan</label>
+                            <label for="inputText" class="col-sm-2 col-form-label" >Kecepatan (mbps)</label>
                             <div class="col-sm-10">
-                            <input type="text" class="form-control" name="kecepatan" value="{{$data->kecepatan}}">
+                            <input type="number" class="form-control" name="kecepatan" value="{{$data->kecepatan}}">
                             </div>
                         </div>
 
@@ -74,14 +74,14 @@
                         <div class="row mb-3">
                             <label for="inputText" class="col-sm-2 col-form-label" >Harga</label>
                             <div class="col-sm-10">
-                            <input type="text" class="form-control" name="harga" value="{{$data->harga}}">
+                            <input type="number" class="form-control" name="harga" value="{{$data->harga}}">
                             </div>
                         </div>
                         
                         <div class="row mb-3">
                             <label for="inputText" class="col-sm-2 col-form-label" >Harga Pemasangan</label>
                             <div class="col-sm-10">
-                            <input type="text" class="form-control" name="harga_pemasangan" value="{{$data->harga_pemasangan}}">
+                            <input type="number" class="form-control" name="harga_pemasangan" value="{{$data->harga_pemasangan}}">
                             </div>
                         </div>
                         

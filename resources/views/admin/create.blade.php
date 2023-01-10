@@ -52,9 +52,9 @@
                         </div>
                         
                         <div class="row mb-3">
-                            <label for="inputText" class="col-sm-2 col-form-label" >Kecepatan</label>
+                            <label for="inputText" class="col-sm-2 col-form-label" >Kecepatan (mbps)</label>
                             <div class="col-sm-10">
-                            <input type="text" class="form-control" name="kecepatan" value="{{ old('kecepatan') }}">
+                            <input type="number" class="form-control" name="kecepatan" value="{{ old('kecepatan') }}">
                             </div>
                         </div>
 
@@ -72,16 +72,16 @@
                         </div>
 
                         <div class="row mb-3">
-                            <label for="harga" class="col-sm-2 col-form-label" name="harga">Harga</label>
+                            <label for="harga" class="col-sm-2 col-form-label" name="harga">Harga (Rp.)</label>
                             <div class="col-sm-10">
-                              <input type="text" class="form-control" name="harga" value="{{ old('harga') }}">
+                              <input type="number" class="form-control" name="harga" value="{{ old('harga') }}">
                             </div>
                         </div>
                         
                         <div class="row mb-3">
-                            <label for="inputPassword" class="col-sm-2 col-form-label" name="harga_pemasangan">Harga Pemasangan</label>
+                            <label for="inputPassword" class="col-sm-2 col-form-label" name="harga_pemasangan">Harga Pemasangan (Rp.)</label>
                             <div class="col-sm-10">
-                              <input type="text" class="form-control" name="harga_pemasangan" value="{{ old('harga_pemasangan') }}">
+                              <input type="number" class="form-control" name="harga_pemasangan" value="{{ old('harga_pemasangan') }}">
                             </div>
                         </div>
     

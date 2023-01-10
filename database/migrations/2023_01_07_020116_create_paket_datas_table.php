@@ -15,13 +15,14 @@ return new class extends Migration
     {
         Schema::create('paket_datas', function (Blueprint $table) {
             $table->id();
-            $table->string('image');
             $table->string('nama');
             $table->string('kecepatan');
+            $table->string('kategori_id');
             $table->tinyInteger('harga');
             $table->tinyInteger('harga_pemasangan');
-            $table->tinyInteger('ppn(%)');
             $table->string('label');
+            $table->string('image');
+            $table->tinyInteger('ppn');
             $table->timestamps();
         });
     }

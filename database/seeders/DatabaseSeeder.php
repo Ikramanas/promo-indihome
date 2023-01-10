@@ -15,19 +15,17 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        \App\Models\User::factory(1)->create();
+        // \App\Models\User::factory(1)->create();
         // \App\Models\Paket_data::factory(10)->create();
 
-        // Paket_data::create(
-        //     [
-        //     'nama' => 'Paket 2P + telepon',
-        //     'kategori_id' => 1,
-        //     'kecepatan' => 20,
-        //     'harga'     => 315000,
-        //     'harga_pemasangan' => '500000',
-        //     'ppn'              => 10,
-        //     'label'            => 'promo',
-        //     ]);
+        User::create(
+            [
+                'name' => 'admin',
+                'email' => 'admin@gmail.com',
+                'email_verified_at' => now(),
+                'password' => Hash::make('12345'), // password
+                'remember_token' => Str::random(10),
+            ]);
         // Paket_data::create(
         //     [
         //     'nama' => 'Paket 2P + telepon',

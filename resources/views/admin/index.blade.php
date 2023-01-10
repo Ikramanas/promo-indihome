@@ -34,7 +34,7 @@
                     <th scope="col">Kecepatan</th>
                     <th scope="col">Harga</th>
                     <th scope="col">Kategori</th>
-                    <th scope="col">image</th>
+                    <th scope="col">Label</th>
                     <th scope="col">Aksi</th>
                   </tr>
                 </thead>
@@ -48,7 +48,7 @@
                         <td>{{$row->kecepatan}}</td>
                         <td>{{$row->harga}}</td>
                         <td>{{$row->kategori->nama}}</td>
-                        <td>{{$row->image}}</td>
+                        <td>{{$row->label}}</td>
                         <td>
 
                         <a href={{route("paket.show",$row->id)}} style="color: black;"> 

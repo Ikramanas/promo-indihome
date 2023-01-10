@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Blade;
 use App\Models\Paket_data;
 use App\Models\Kategori;
 
@@ -28,6 +29,7 @@ class HomeController extends Controller
     {
         $kategori = Kategori::all();
         $paket_data = Paket_data::all();
+
         return view('index', compact(['paket_data','kategori']));
     }
 }

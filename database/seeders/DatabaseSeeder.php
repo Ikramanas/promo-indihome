@@ -66,25 +66,25 @@ class DatabaseSeeder extends Seeder
         //     'ppn'              => 10,
         //     'label'            => 'promo',
         //     ]);
-        // // Paket_data::create(
-        // //     [
-        // //     'nama' => 'PPaket 2P',
-        // //     'kategori_id' => 'Promo Internet Telepon',
-        // //     'kecepatan' => 50,
-        // //     'harga'     => 590000,
-        // //     'harga_pemasangan' => '500000',
-        // //     'ppn'              => 10,
-        // //     'label'            => 'promo',
-        // //     ]);
-        // // Paket_data::create(
-        // //     [
-        // //     'nama' => 'Promo Internet Telepon',
-        // //     'kategori_id' => 'Promo Internet Telepon',
-        // //     'kecepatan' => 100,
-        // //     'harga'     => 945000,
-        // //     'harga_pemasangan' => '500000',
-        // //     'ppn'              => 10,
-        // //     'label'            => 'promo',
-        // //     ]);
+        // Paket_data::create(
+        //     [
+        //     'nama' => 'PPaket 2P',
+        //     'kategori_id' => 'Promo Internet Telepon',
+        //     'kecepatan' => 50,
+        //     'harga'     => 590000,
+        //     'harga_pemasangan' => '500000',
+        //     'ppn'              => 10,
+        //     'label'            => 'promo',
+        //     ]);
+        // Paket_data::create(
+        //     [
+        //     'nama' => 'Promo Internet Telepon',
+        //     'kategori_id' => 'Promo Internet Telepon',
+        //     'kecepatan' => 100,
+        //     'harga'     => 945000,
+        //     'harga_pemasangan' => '500000',
+        //     'ppn'              => 10,
+        //     'label'            => 'promo',
+        //     ]);
     }
 }

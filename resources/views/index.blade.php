@@ -94,20 +94,23 @@
               <div class="row gy-4" data-aos="fade-left">
                 
                 @foreach ($paket_data->where('kategori_id',"$row->id") as $paket)
-                
                 <div class="col-lg-4 col-md-6 " data-aos="zoom-in" data-aos-delay="100">
-                    
+                  
                   <div class="box">
+                    
+                    @if($paket->label == 'promo')
                     <span class="featured">Promo</span>
-              
+                    @endif
+                    
                     <h3>{{$paket->nama}}</h3>
                     
-                    <img src="assets/img/20mbps.PNG" class="img-fluid " style="margin-top: -15px;">
-                    <div class="price"><sup>Rp.</sup>{{$paket->harga}}<span>/bln</span></div>
+                    <img src='{{asset("admin/assets/img/$paket->image")}}' class="img-fluid " style="margin-top: -15px;">
+                    {{-- {{dd($paket)}} --}}
+                    <div class="price"><sup>Rp.</sup> @currency($paket->harga)<span>/bln</span></div>
 
                     <ul>
-                      <li>*Biaya pemasangan Rp. {{$paket->harga_pemasangan}} <i>(dibayar setelah pemasangan)</i></li>
-                      <li>*PPN 10%</li>
+                      <li>*Biaya pemasangan Rp @currency($paket->harga_pemasangan) <i>(dibayar setelah pemasangan)</i></li>
+                      <li>*PPN {{$paket->ppn}}%</li>
                     </ul>
                     <a href="https://api.whatsapp.com/send?phone=6282290129248&text=Form Pemasangan Indihome%0ANama%20Lengkap%20%3A%0AAlamat%20Lengkap%20Pemasangan%20%3A%0ANo%20HP%20%3A%0AEmail%20%3A%0APaket%20Yang%20Dipilih%20%3A%0A*Foto%20KTP*%0A*Foto%20dgn%20KTP*%0A*Share%20Lokasi%20Via%20WA*" class="btn-buy mt-1">Berlangganan</a>
 

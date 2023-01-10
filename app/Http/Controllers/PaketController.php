@@ -45,9 +45,9 @@ class PaketController extends Controller
         [
             'image'         => 'image|mimes:jpg,jpeg,png,gif,svg|max:2048',
             'nama'          => 'required',     
-            'kecepatan'     => 'required',     
+            'kecepatan'     => 'required|numeric',     
             'kategori_id'   => 'required',
-            'harga'         => 'required'
+            'harga'         => 'required|numeric'
         ]);
         
         if ($validator->fails()) {
@@ -96,7 +96,7 @@ class PaketController extends Controller
 
     /**
      * Show the form for editing the specified resource.
-     *
+     *  
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
@@ -121,9 +121,10 @@ class PaketController extends Controller
         $this->validate($request, [
             'image'         => 'image|mimes:jpg,jpeg,png,gif,svg|max:2048',
             'nama'          => 'required',     
-            'kecepatan'     => 'required',     
+            'kecepatan'     => 'required|numeric',     
             'kategori_id'   => 'required',
-            'harga'         => 'required'
+            'harga'         => 'required|numeric',
+            'harga_pemasangan'=> 'numeric'
         ]);
 
         if ($request->hasFile('image')) {

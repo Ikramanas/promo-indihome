@@ -6,7 +6,7 @@
       <li class="nav-item">
         <a class="nav-link " href={{route('paket.index')}}>
           <i class="bi bi-grid"></i>
-          <span>Dashboard</span>
+          <span>Paket</span>
         </a>
       </li><!-- End Dashboard Nav -->
 

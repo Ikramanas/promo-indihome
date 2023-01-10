@@ -15,9 +15,11 @@ return new class extends Migration
     {
         Schema::create('paket_datas', function (Blueprint $table) {
             $table->id();
+            $table->string('image');
             $table->string('nama');
             $table->string('kecepatan');
-            $table->string('harga');
+            $table->tinyInteger('harga');
+            $table->tinyInteger('harga_pemasangan');
             $table->tinyInteger('ppn(%)');
             $table->string('label');
             $table->timestamps();

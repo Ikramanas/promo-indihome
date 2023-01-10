@@ -50,9 +50,14 @@
                         <td>{{$row->kategori->nama}}</td>
                         <td>{{$row->image}}</td>
                         <td>
+
                         <a href={{route("paket.show",$row->id)}} style="color: black;"> 
                             <button type="button" class="btn btn-show"><i class="bi bi-eye-fill"></i></button>
-                        <a href={{route("paket.edit",$row->id)}} style="color: black;"><button type="button" class="btn btn-edit"><i class="bx bxs-edit"></i></button></a>
+                        </a>
+
+                        <a href={{route("paket.edit",$row->id)}} style="color: black;"><button type="button" class="btn btn-edit"><i class="bx bxs-edit"></i></button>
+                        </a>
+                        
                         <form action="{{route('paket.destroy' ,$row->id)}}" method="post">
                           @csrf
                           @method('DELETE')   

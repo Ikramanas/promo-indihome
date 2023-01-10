@@ -20,7 +20,7 @@ Route::get('/login', [LoginController::class, 'index'])->name('login.index')->mi
 Route::post('/login', [LoginController::class, 'authenticate'])->name('login.authenticate')->middleware('guest');
 Route::get('/logout', [LoginController::class, 'logout'])->name('logout')->middleware('auth');
 
-Route::get('/home', [HomeController::class, 'index'])->name('home');
+Route::get('/', [HomeController::class, 'index'])->name('home.index');
 
 
 Route::resource('/paket', PaketController::class)->middleware('auth');;  

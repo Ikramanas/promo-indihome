@@ -22,7 +22,7 @@ return new class extends Migration
             $table->Integer('harga_pemasangan');
             $table->string('label');
             $table->string('image');
-            $table->Integer('ppn');
+            $table->Integer('ppn')->default(10);
             $table->timestamps();
         });
     }

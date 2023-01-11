@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\Storage;
 use App\Models\Paket_data;
 use App\Models\Kategori;
+
 class PaketController extends Controller
 {
     /**
@@ -18,7 +19,7 @@ class PaketController extends Controller
     {
         $title = 'Dashboard';
         $data = Paket_data::orderBy('created_at', 'desc')->Paginate(20)->withQueryString();
-        return view('admin.index', compact(['title','data']));
+        return view('admin.index', compact(['title', 'data']));
     }
 
     /**
@@ -30,7 +31,7 @@ class PaketController extends Controller
     {
         $title = 'Tambah Data';
         $category = Kategori::all();
-        return view('admin.create', compact(['title','category']));
+        return view('admin.create', compact(['title', 'category']));
     }
 
     /**
@@ -41,44 +42,46 @@ class PaketController extends Controller
      */
     public function store(Request $request)
     {
-        $validator = Validator::make($request->all(),
-        [
-            'image'         => 'image|mimes:jpg,jpeg,png,gif,svg|max:2048',
-            'nama'          => 'required',     
-            'kecepatan'     => 'required|numeric',     
-            'kategori_id'   => 'required',
-            'harga'         => 'required|numeric'
-        ]);
-        
+        $validator = Validator::make(
+            $request->all(),
+            [
+                'image'         => 'image|mimes:jpg,jpeg,png,gif,svg|max:2048',
+                'nama'          => 'required',
+                'kecepatan'     => 'required|numeric',
+                'kategori_id'   => 'required',
+                'harga'         => 'required|numeric'
+            ]
+        );
+
         if ($validator->fails()) {
             return redirect()->route("paket.create")->withErrors($validator)->withInput();
         }
-        
-        if ($request->hasfile('image')) {            
-            $image = round(microtime(true) * 1000).'-'.str_replace(' ','-',$request->file('image')->getClientOriginalName());
+
+        if ($request->hasfile('image')) {
+            $image = round(microtime(true) * 1000) . '-' . str_replace(' ', '-', $request->file('image')->getClientOriginalName());
             $request->file('image')->move(public_path('admin/assets/img'), $image);
             // dd($request->hasfile('image'));
             Paket_data::create([
-                    'image'             => $image,
-                    'nama'              => $request->nama,     
-                    'kecepatan'         => $request->kecepatan,     
-                    'kategori_id'       => $request->kategori_id,
-                    'harga'             => $request->harga,
-                    'harga_pemasangan'  => $request->harga_pemasangan,
-                    'label'             => $request->label,
-                ]);
+                'image'             => $image,
+                'nama'              => $request->nama,
+                'kecepatan'         => $request->kecepatan,
+                'kategori_id'       => $request->kategori_id,
+                'harga'             => $request->harga,
+                'harga_pemasangan'  => $request->harga_pemasangan,
+                'label'             => $request->label,
+            ]);
             // return redirect()->route('paket.create')->with('success','Berhasil menyimpan data');
-        }else{
+        } else {
             Paket_data::create([
-                'nama' => $request->nama,     
-                'kecepatan' => $request->kecepatan,     
+                'nama' => $request->nama,
+                'kecepatan' => $request->kecepatan,
                 'kategori_id' => $request->kategori_id,
                 'harga' => $request->harga,
                 'harga_pemasangan' => $request->harga_pemasangan,
                 'label' => $request->label,
             ]);
         }
-        return redirect()->route('paket.index')->with('success','Berhasil menyimpan data');
+        return redirect()->route('paket.index')->with('success', 'Berhasil menyimpan data');
     }
 
     /**
@@ -91,7 +94,7 @@ class PaketController extends Controller
     {
         $data = Paket_data::find($id);
         $title = 'Detail Paket';
-        return view('admin.show',compact(['data','title']));
+        return view('admin.show', compact(['data', 'title']));
     }
 
     /**
@@ -105,7 +108,7 @@ class PaketController extends Controller
         $data = Paket_data::find($id);
         $category = Kategori::all();
         $title = 'Edit Paket';
-        return view('admin.edit',compact(['data','title','category']));
+        return view('admin.edit', compact(['data', 'title', 'category']));
     }
 
     /**
@@ -120,46 +123,44 @@ class PaketController extends Controller
         $paket_data = Paket_data::find($id);
         $this->validate($request, [
             'image'         => 'image|mimes:jpg,jpeg,png,gif,svg|max:2048',
-            'nama'          => 'required',     
-            'kecepatan'     => 'required|numeric',     
+            'nama'          => 'required',
+            'kecepatan'     => 'required|numeric',
             'kategori_id'   => 'required',
             'harga'         => 'required|numeric',
-            'harga_pemasangan'=> 'numeric'
+            'harga_pemasangan' => 'numeric'
         ]);
 
         if ($request->hasFile('image')) {
             //upload image baru
-            $image = round(microtime(true) * 1000).'-'.str_replace(' ','-',$request->file('image')->getClientOriginalName());
+            $image = round(microtime(true) * 1000) . '-' . str_replace(' ', '-', $request->file('image')->getClientOriginalName());
             $request->file('image')->move(public_path('admin/assets/img'), $image);
 
             //delete image lama
-            Storage::delete('admin/assets/img'.$image);
+            Storage::delete('admin/assets/img' . $image);
 
             //update data
-            
+
             $paket_data->update([
                 'image'             => $image,
-                'nama'              => $request->nama,     
-                'kecepatan'         => $request->kecepatan,     
+                'nama'              => $request->nama,
+                'kecepatan'         => $request->kecepatan,
                 'kategori_id'       => $request->kategori_id,
                 'harga'             => $request->harga,
                 'harga_pemasangan'  => $request->harga_pemasangan,
                 'label'             => $request->label,
             ]);
-            // return redirect()->route('paket.index')->with(['success' => 'Data berhasil diubah!']); 
-
-        }
-        else { //jika tidak ada gambar yang ditemukan
+            return redirect()->route('paket.index')->with(['success' => 'Data berhasil diubah!']);
+        } else { //jika tidak ada gambar yang ditemukan
             // dd($request->nama);
             $paket_data->update([
-                    'nama'              => $request->nama,     
-                    'kecepatan'         => $request->kecepatan,     
-                    'kategori_id'       => $request->kategori_id,
-                    'harga'             => $request->harga,
-                    'harga_pemasangan'  => $request->harga_pemasangan,
-                    'label'             => $request->label,
-            ]);     
-            return redirect()->route('paket.index')->with(['success' => 'Data berhasil diubah!']); 
+                'nama'              => $request->nama,
+                'kecepatan'         => $request->kecepatan,
+                'kategori_id'       => $request->kategori_id,
+                'harga'             => $request->harga,
+                'harga_pemasangan'  => $request->harga_pemasangan,
+                'label'             => $request->label,
+            ]);
+            return redirect()->route('paket.index')->with(['success' => 'Data berhasil diubah!']);
         }
         //setelah melakukan update kembali ke index
     }
